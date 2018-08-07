@@ -1,0 +1,1 @@
+json.patial! "api/users/user", user: @user
