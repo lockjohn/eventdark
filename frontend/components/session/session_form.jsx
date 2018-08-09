@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
+
 class SessionForm extends React.Component {
 
 constructor (props) {
@@ -19,7 +20,7 @@ componentDidMount() {
 }
 
 demoUser() {
-    this.props.processForm({username: "Dolores", password: "123456"});
+    this.props.login({username: "Dolores", password: "123456"});
 }
 
 update(field)  {
@@ -58,7 +59,7 @@ render () {
             <label className="login-input-label">Username<br />
                 <input value={this.state.username}
                 onChange={this.update('username')}
-                placeholder=" Enter Password"
+                placeholder=" Enter Username"
                 className="login-input" />
             </label><br />
             <label className="login-input-label">Password<br />

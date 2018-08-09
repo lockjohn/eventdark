@@ -16,6 +16,7 @@ const mdp = (dispatch) => {
     return {
         processForm: (user)=> dispatch(login(user)),
         clearErrors: ()=> dispatch(clearErrors()),
+        login: (user) => dispatch(login(user))
     }
 };
 

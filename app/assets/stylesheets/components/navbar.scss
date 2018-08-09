@@ -123,7 +123,7 @@ font-size: 20px;
 
 .dropdown-list {
   display: none;
-  filter: drop-shadow(0 0 1px rgb(233, 231, 231));
+  filter: drop-shadow(0 0 3px rgb(199, 199, 199));
   position: absolute;
   right: -1px;
   top: 45px;
@@ -136,6 +136,7 @@ font-size: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .dropdown-list-item {
