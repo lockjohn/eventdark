@@ -32,15 +32,15 @@ export const signup = user => dispatch => (
     )
 );
 
-export const login = user => dispatch (
+export const login = user => dispatch=> (
     SessionAPIUtil.login(user).then(currentUser => dispatch(
-        receiveCurrentUser(user), err => (
+        receiveCurrentUser(currentUser), err => (
             dispatch(receiveErrors(err.responseJSON))
         )
     ))
 );
 
-export const logout  = () => dispatch (
+export const logout  = () => dispatch => (
     SessionAPIUtil.logout().then(()=>dispatch(logoutCurrentUser())),
     err => dispatch(receiveErrors(err.responseJSON))
 );

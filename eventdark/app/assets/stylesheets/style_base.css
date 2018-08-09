@@ -1,0 +1,57 @@
+/* color: #666a73;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    height: 59px;
+    padding: 0 12px;
+
+    media (min-width: 960px)
+.eds-global-header__call-to-action__link, .eds-global-header__menu-button button, .eds-global-header__menu .eds-dropdown-menu__link, .eds-global-header__quick-link {
+    padding: 0 20px;
+
+    .eds-global-header{position:relative}.eds-global-header 
+    .eds-global-header__logo-link{display:flex;flex:none;align-items:center;height:59px}
+    @media (max-width: 960px){.eds-global-header 
+        .eds-global-header__logo-link{width:auto;background-color:transparent}}.eds-global-header 
+        .eds-global-header__logo-link:active,.eds-global-header 
+        .eds-global-header__logo-link:focus,.eds-global-header 
+        .eds-global-header__logo-link:hover{text-decoration:none;outline:none}.eds-global-header 
+        .eds-global-header__logo-link i{margin:0;padding:0 24px}@media (min-width: 960px)
+        {.eds-global-header .eds-global-header__logo-link.eds-global-header--logo-special-width{width:288px}}
+        
+        .eds-global-header__skip-links:focus{background-color:#007F8C;border-bottom-right-radius:5px;color:white;position:absolute;left:0;top:0;display:block;z-index:40600;padding:10px;outline:none}.
+        .eds-global-header__main{height:59px;border-bottom:1px solid #EFF2F5;display:flex;justify-content:space-between;position:relative;letter-spacing:normal;font-size:14px;background-color:#fff}
+        .eds-global-header--style-organizer .eds-global-header__main{background-color:#363A43}.ealign-items:center;display:flex;justify-content:space-between}
+        .eds-global-header__major,.eds-global-header__search{flex:1}.eds-global-header__search-autocomplete .eds-autocomplete-field__dropdown-holder{padding:10px 0}.eion__link{color:#666A73;display:flex;align-items:center;white-space:nowrap;height:59px;padding:0 12px}@media (min-width: 960px){
+            .eds-global-header__menu .eds-dropdown-menu__link,.eds-global-header__menu-button button,.eds-global-header__quick-link,.eds-global-header__call-to-action__link{padding:0 20px}}.
+            eds-global-header__menu .eds-dropdown-menu__link:active,.eds-global-header__menu .eds-dropdown-menu__link:focus,.eds-global-header__menu-button button:active,.eds-global-header__menu-button button:focus,.eds-global-header__quick-link:active,.eds-global-header__quick-link:focus,.eds-global-header__call-to-action__link:active,
+            .eds-global-header__call-to-action__link:focus{text-decoration:none;background:#F8F8FA;outline:none}.eds-global-header__menu .eds-dropdown-menu__link:hover,.eds-global-header__menu-button button:hover,.eds-global-header__quick-link:hover,
+            .eds-global-header__call-to-action__link:hover{text-decoration:none;outline:none;color:#363A43}.eds-global-header--style-organizer .eds-global-header__menu .eds-dropdown-menu__link,.eds-global-header--style-organizer .eds-global-header__menu-button button,.eds-global-header--style-organizer .eds-global-header__quick-link,.eds-global-header--style-organizer .eds-global-header__
+            call-to-action__link{color:#C3C6CF}.eds-global-header--style-organizer .eds-global-header__menu .
+        eds-dropdown-menu__link:active,.eds-global-header--style-organizer .eds-global-header__menu .eds-dropdown-menu__link:focus,.eds-global-header--style-organizer 
+        .eds-global-header__menu-button button:active,.eds-global-header--style-organizer .eds-global-header__menu-button button:focus,.eds-global-header--style-organizer 
+        .eds-global-header__quick-link:active,.eds-global-header--style-organizer .eds-global-header__quick-link:focus,.eds-global-header--style-organizer
+        .eds-global-header__call-to-action__link:active,.eds-global-header--style-organizer .eds-global-header__call-to-action__link:focus{background-color:#45494E}
+        .eds-global-header--style-organizer .eds-global-header__menu .eds-dropdown-menu__link:hover,
+        .eds-global-header--style-organizer .eds-global-header__menu-button button:hover,.eds-global-header--style-organizer .eds-global-header__quick-link:hover,
+        .eds-global-header--style-organizer .eds-global-header__call-to-action__link:hover{color:#fff}.eds-global-header__quick-link--active{background-color:#F8F8FA}
+        .eds-global-header--style-organizer .eds-global-header__quick-link--active{background-color:#45494E}@media (max-width: 960px){.eds-global-header__menu-button 
+            button,.eds-global-header__quick-link--narrow{border-radius:40px;height:40px;width:40px;margin-left:6px;padding:0;justify-content:center;outline:none}
+        .eds-global-header__menu-button button:active,.eds-global-header__menu-button button:focus,.eds-global-header__quick-link--narrow:active,.eds-global-header__quick-link--narrow:focus{background:#F8F8FA}}
+        .eds-global-header__menu:last-child .eds-dropdown-menu{border-right:0}.eds-global-header__menu-profile-image--container{position:relative;display:block}
+        .eds-global-header__menu-profile-image--container .eds-global-header__menu-profile-image{border-radius:50%;height:32px;width:32px;vertical-align:middle}.
+        eds-global-header__menu-profile-image--container .eds-global-header__menu-prof
+        ile-image--border{position:absolute;top:0;left:0;border-radius:50%;width:28px;height:28px;border:2px solid #fff;opacity:.5}@media (max-width: 480px)
+        {.eds-global-header__user-menu .eds-dropdown-menu__icon,.eds-global-header__narrow-menu .eds-dropdown-menu__icon{display:none}}
+        .eds-global-header__user-menu .eds-global-header__menu-label,.eds-global-header__narrow-menu .eds-global-header__menu-label{display:none}
+        @media (min-width: 960px){.eds-global-header__menu-icon{margin-right:4px}}.eds-global-header__user-menu .eds-global-header__menu-icon
+        {display:flex;justify-content:center;align-items:center;border-radius:40px;outline:none}@media (min-width: 960px)
+        {.eds-global-header__user-menu .eds-global-header__menu-icon{width:40px;height:40px;margin:0;background:#F8F8FA}
+        .eds-global-header--style-organizer .eds-global-header__user-menu .eds-global-header__menu-icon{background:transparent}
+        .eds-global-header__user-menu .eds-global-header__menu-icon i svg path{fill:#C3C6CF}}
+        .eds-global-header__menus .eds-dropdown-menu__link{padding-right:20px}.
+        eds-global-header__quick-link.eds-global-header__quick-link--narrow{display:flex} */
