@@ -32,11 +32,8 @@ align-items: center;
 .nav-link {
 border-left: 1px solid $border-color;
 height: 60px;
-width: auto;
-text-align: center;
 box-sizing: border-box;
 display: flex;
-justify-content: center;
 align-items: center;   
 }
 
@@ -46,12 +43,23 @@ border: none;
 padding-left: 20px;
 padding-right: 20px;
 font-size: 13px;
-letter-spacing: 0.5px;
+letter-spacing: 0.8px;
 color: #45494E; 
+}
+
+.media-nav {
+    display: none;
 }
 
 .nav-link:hover {
     background: $border-color;
+}
+
+//responsive nav size
+@media (min-width: 960px) {
+    .media-nav {
+    display: inherit;
+    }
 }
 
 .header-name {
@@ -66,7 +74,7 @@ padding: 0px 5px;
 
 .logo {
 font-size: 23px;
-font-weight: 600px;
+font-weight: bolder;
 color: orangered;
 text-align: center;
 margin: 0px 20px;
@@ -86,32 +94,40 @@ border: 3px solid #D2D6DF;
 }
 
 .search-bar {
+    display: none;
 border-left: 1px solid $border-color;
 height: 60px;
 width: 100%;
-
 }
 
-.header-name {
-
+@media (min-width: 800px) {
+    .search-bar {
+        display: inherit;
+    }
 }
 
 .arrow {
-
+font-size: 20px;
 }
 
 .dropdown {
+    
     a {
         display:flex;
     }
 }
+.dropdown-parent {
+    position: relative;
+}
 
 .dropdown-list {
   display: none;
+  filter: drop-shadow(0 0 1px rgb(233, 231, 231));
   position: absolute;
-  left: -1px;
-  font-size: 14px;
+  right: -1px;
+  top: 45px;
   white-space: nowrap;
+  color: $dark-gray;
   background: #fff;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -119,11 +135,28 @@ width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;
-
 }
 
-div.dropdown:hover + .dropdown-list{
+.dropdown-list-item {
+    display: list-item;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+    text-align: left;
+    padding: 16px 20px;
+}
+
+div.dropdown:hover  .dropdown-list{
      display: block;
-     background-color: red;
 }
 
+li.dropdown-list-item:hover {
+    display: block;
+    background-color: $border-color;
+}
+
+a.create-event {
+    color: $focus-color;
+    font-weight: 600;
+}

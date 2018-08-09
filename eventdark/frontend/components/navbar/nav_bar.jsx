@@ -14,16 +14,16 @@ const NavBar = (props) => (
             </div>
         </div> 
         <div className="nav-right">
-            <div className="nav-link">
+            <div className="nav-link media-nav">
                 <a href="">BROWSE EVENTS</a>
             </div>
-            <div className="nav-link">
+            <div className="nav-link ">
                 <NavBarGreeting 
                 currentUser={props.currentUser}
                 logout={props.logout} />
             </div>
-            <div className="nav-link">
-                <a href="">CREATE EVENT</a>
+                <div className="nav-link media-nav">
+                <a className="create-event">CREATE EVENT</a>
             </div>
         </div>
       </nav>
