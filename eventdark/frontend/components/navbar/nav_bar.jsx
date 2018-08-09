@@ -17,7 +17,7 @@ const NavBar = (props) => (
             <div className="nav-link media-nav">
                 <a href="">BROWSE EVENTS</a>
             </div>
-            <div className="nav-link ">
+            <div className="nav-link dropdown-trip">
                 <NavBarGreeting 
                 currentUser={props.currentUser}
                 logout={props.logout} />

@@ -11,6 +11,15 @@ constructor (props) {
         password: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+}
+
+componentDidMount() {
+    this.props.clearErrors();
+}
+
+demoUser() {
+    this.props.processForm({username: "Dolores", password: "123456"});
 }
 
 update(field)  {
@@ -41,23 +50,35 @@ render () {
  const { formType, navLink} = this.props
 
     return(
+        <div className="form-container">
         <form className="session-form">
-            <h2>Let's get started</h2><br />
-            <p>Enter your username and password to {formType} or {navLink}</p>
-            <label className="login-input-label">Username
+            <h1>eD</h1>
+            <h2>Let's get started</h2>
+            <p>Enter your info to {formType} or <em>{navLink}</em></p>
+            <label className="login-input-label">Username<br />
                 <input value={this.state.username}
                 onChange={this.update('username')}
+                placeholder=" Enter Password"
                 className="login-input" />
             </label><br />
-            <label className="login-input-labe">Password
-                <input type="password" 
+            <label className="login-input-label">Password<br />
+                <input type="password"
+                placeholder=" Enter Password" 
                 value={this.state.password} 
                 onChange={this.update('password')}
                 className="login-input"/>
-            </label><br />
-            <button onClick={this.handleSubmit}>Get Started</button><br />
-            {this.renderErrors}
+            </label>
+            {this.renderErrors()}
+            <button 
+                className="login-button"
+                onClick={this.handleSubmit}
+                >Get Started</button><br />
+            <button 
+                className="login-button"
+                onClick={this.demoUser}
+                >Demo</button><br />
         </form>
+        </div>
     )}
 }
 

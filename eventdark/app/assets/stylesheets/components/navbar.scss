@@ -12,6 +12,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between; 
 align-items: center;
+border-bottom: 1px solid $border-color;
 }
 
 .nav-left {
@@ -147,7 +148,7 @@ font-size: 20px;
     padding: 16px 20px;
 }
 
-div.dropdown:hover  .dropdown-list{
+div.dropdown-trip:hover  .dropdown-list{
      display: block;
 }
 
