@@ -7,7 +7,7 @@ const NavBarGreeting = ({ currentUser, logout }) => {
         <div className="dropdown-parent">
             <div className="dropdown">
                 <a className="header-name">
-                    <img className="avatar" src={window.images.avatar}/>
+                    <img className="avatar" src={window.avatar}/>
                     <span className="header-name name"> {currentUser.username}</span>
                     <i className="fa fa-angle-down arrow"></i>
                 </a>
