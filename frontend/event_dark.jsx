@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {signup, login, logout} from './actions/session_actions';
+import { fetchAllEvents,fetchEvent,createEvent, updateEvent } from './actions/event_actions';
 import configureStore from "./store/store";
 import Root from './components/root';
 
@@ -23,9 +23,10 @@ const root = document.getElementById('root');
 ReactDOM.render(<Root store={store}/>, root)
     
 //testing
-window.signup = signup;
-window.login = login;
-window.logout = logout;
+window.fetchEvent = fetchEvent;
+window.fetchAllEvents = fetchAllEvents;
+window.createEvent = createEvent;
+window.updateEvent = updateEvent;
 window.getState = store.getState;
 window.dispatch = store.dispatch;
 })

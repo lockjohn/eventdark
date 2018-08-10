@@ -7,13 +7,13 @@ class Api::EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
-         @user = User.find(@event.organizer_id)
+
         render "api/events/show"
     end
 
     def create
         @event = Event.new(event_params)
-        organizer_id = current_user.id
+    
         if @event.save
             render "api/events/show"
         else
@@ -23,6 +23,7 @@ class Api::EventsController < ApplicationController
 
     def update
         @event = Event.find(params[:id])
+    
         if  @event.update(event_params)
             render "api/events/show"
         else
@@ -38,7 +39,8 @@ class Api::EventsController < ApplicationController
             :organizer_id, 
             :description, 
             :price, :capacity, 
-            :date, :time)
+            :date, :time,
+            :location_id)
     end
 
 end
