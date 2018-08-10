@@ -2,7 +2,7 @@ import * as EventAPIUtil from '../util/event_api_util';
 
 export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
-export const EVENT_ERROR = "EVENT_ERROR";
+export const EVENT_ERRORS = "EVENT_ERROR";
 
 const receiveAllEvents = (events) => {
     return {
@@ -16,11 +16,12 @@ const receiveEvent = (event) => {
         event
     }
 }
-const eventErrors = (errors) => {
+const eventErrors = () => {
     return {
-        type: EVENT_ERROR,
-        errors
-    }
+        type: EVENT_ERRORS,
+        errors: ["Apologies, that event is no longer available", 
+        "Please fill out all required fields"]
+     }
 }
 
 export const fetchAllEvents = () => dispatch => {
@@ -34,7 +35,7 @@ export const fetchEvent = (id) => dispatch => {
     return ( 
     EventAPIUtil.fetchEvent(id)
     .then(fetchedEvent =>dispatch(receiveEvent(fetchedEvent)), 
-    (err) => dispatch(eventErrors(err.responseJSON)))
+            (err) => {return dispatch(eventErrors(err.responseJSON))})
     )
 }
 export const createEvent = (event) => dispatch => {
