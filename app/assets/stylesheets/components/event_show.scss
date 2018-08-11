@@ -1,0 +1,106 @@
+.event-hero {
+  width: 100%;
+  height: 100vh;
+  max-height: 519px;
+  display: flex;
+  flex-direction: column;
+    align-items: stretch;
+}
+ .event-description-wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: 519px;
+  display: flex;
+  flex-direction: column;
+    // align-items: stretch
+}
+.hero-img {
+  background-color: red;
+  flex: 1 2 500px;
+}
+ .hero-detail {
+  flex: 1 1 200px;
+}
+
+.register-bar {
+  background-color: white;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* at this point I want two to wrap under one and one to have a max height of 519 and
+maxwidth of  */
+@media (max-width: 789px) and (min-width: 470px) {
+  .register-bar{
+    background-color: white;
+    position: inherit;
+  }
+  
+  .event-hero {
+  width: 100%;
+  height: 100vh;
+  max-height: 519px;
+  display: flex;
+  flex-direction: column;
+    align-items: stretch;
+}
+.hero-img {
+  flex: 1 2 500px;
+}
+ .hero-detail {
+  flex: 1 1 200px;
+}
+  
+.event-description-wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: 519px;
+  display: flex;
+  flex-direction: row-reverse;
+//   flex-wrap:
+//   justify-items: center;
+}
+  .event-description {
+    width:66.6666%;
+  }
+  .event-detail {
+    width:33.3333%;
+  }
+}
+
+@media (min-width:790px) {
+.event-hero {
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  max-height: 360px;
+  display: flex;
+  flex-direction: row;
+}
+.hero-img {
+  flex: 2 1 500px;
+}
+ .hero-detail {
+  flex: 1 1 170px;
+}
+  .event-description-wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: 519px;
+  display: flex;
+  flex-direction: row-reverse;
+//   align-items: stretch
+}
+  .event-description {
+    width:66.6666%;
+  }
+  .event-detail {
+    width:33.3333%;
+  }
+}
+
+
+* {box-sizing: border-box;}

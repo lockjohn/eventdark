@@ -2,12 +2,20 @@ import React from 'react';
 
 class EventShow extends React.Component {
     
+
+    componentWillReceiveProps(ownProps) {
+        if (this.props.eventId!=ownProps.match.params.eventId){
+        this.props.fetchEvent(ownProps.match.params.eventId);
+        }
+    }
     componentDidMount () {
+        // debugger
         this.props.fetchEvent(this.props.eventId);
 
     }
 
     render () {
+        // debugger
         const {event} = this.props;
 
         if (!event) return null; // so component can mount and fetch
@@ -28,10 +36,14 @@ class EventShow extends React.Component {
                                 <a>{event.organizer}</a>
                             </div>
                             <div className="hero-detail lower-half">
-                                <div className="price"></div>
+                                <div className="price">{event.price}</div>
                             </div>
                         </div>
                       </div>
+                      <div className="register-bar">
+                        <button className="register-button">REGISTER</button>
+                      </div>
+                    <div className="event-description-wrapper">
                       <div className="event-detail">
                         <div>
                           <h3>Date and Time</h3>
@@ -43,11 +55,6 @@ class EventShow extends React.Component {
                               <p> egypt</p>
                               <a>View Map</a>
                         </div>
-                        {/* <EventDateDetail 
-                                date={event.date} 
-                                time={event.time}/>
-                        <EventLocationDetail 
-                                location={event.location}/> */}
                       </div>
                       <div className="event-description">
                                 <p>{event.description}</p>
@@ -55,6 +62,7 @@ class EventShow extends React.Component {
                       <div className="event-organizer">
                                 <h2>{event.organizer}</h2>
                                 <p>{event.organizer_description}</p>
+                      </div>
                       </div>
                   </div>
             </div>
