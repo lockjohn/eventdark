@@ -71,7 +71,7 @@ render () {
             </label>
             {this.renderErrors()}
             <button 
-                className="login-button"
+                className="login-button first"
                 onClick={this.handleSubmit}
                 >Get Started</button><br />
             <button 
