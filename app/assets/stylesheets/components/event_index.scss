@@ -1,0 +1,127 @@
+/* setting up grid with autofill, min size 250 width*/
+.ei-grid {
+width: 80%;
+display: grid;
+grid-gap: 30px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+// border: tomato 2px solid;
+margin: 0 auto;
+  /*what happens if I give it a height?*/
+}
+
+/*each item */
+
+.ei-item
+{   
+    height: 343.5;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+	box-sizing: border-box;
+	display: block;
+	// margin: 15px;
+	position: relative;
+	transition: box-shadow 0.5s;
+}
+.ei-item:hover
+{
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.35);
+}
+.ei-item-img
+{
+    background-image: image-url('herotest1.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	object-fit: cover;
+	overflow: hidden;
+	padding-top: 50%;
+	text-align: center;
+	width: 100%;
+}
+.ei-item-price
+{
+	background: white;
+	box-shadow: 0 0 1px 0 rgba(0,0,0,0.15);
+	color: $dark-gray;
+	font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: 1.3px;
+	opacity: 0.96;
+	padding: 3px 10px 5px 10px;
+	position: absolute;
+	right: 12px;
+	top: 12px;
+}
+/*surrounds the following three divs */
+
+.ei-item-body
+{
+	align-items: space-between;
+	background-color: white;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 102px;
+	padding: 0px 15px;
+}
+.ei-item-date
+{
+	color: #45494E;
+	display: block;
+	font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 100;
+	height: 18px;
+	letter-spacing: 1.2px;
+	line-height: 18px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+.ei-item-title
+{
+    color: #282C35;
+    font-family: $sans-serif;
+	// font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	height: 38px;
+	// margin: 0 auto;
+	margin-top: 3px;
+	max-height: 38px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.ei-item-organizer
+{
+	color: #666A73;
+	font-family: Raleway, Open-Sans, Helvetica-Neue, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	height: 18px;
+	line-height: 18px;
+	margin-top: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+.ei-item-footer
+{
+	align-items: center;
+	background-color: white;
+	border-top: 1px solid #eff2f5;
+	display: flex;
+	height: 31px;
+	justify-content: space-between;
+	width: 100%;
+}
+.ei-item-categories
+{
+	font-size: 12px;
+	padding: 0 0 0 15px;
+}

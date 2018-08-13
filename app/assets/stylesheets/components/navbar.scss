@@ -1,14 +1,20 @@
+.background-app-div {
+    margin: 0 auto;
+}
+
 .nav-header {
     height: 60px;
     font-family: $sans-serif;
     font-size: 15px;
     background-color: #fff;
+    max-width: 100%;
 }
 
 .nav {
+background-color: #fff;
 height: 60px;
 max-width: none;
-width: 100%;
+width: 100vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between; 
