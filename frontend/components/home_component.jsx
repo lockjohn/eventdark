@@ -34,7 +34,6 @@ class Home extends React.Component  {
 
 }
 
-//don't know if this will work with the props... might need to break it down more in the home container and pass events to event index, etc
 
 
 export default Home;

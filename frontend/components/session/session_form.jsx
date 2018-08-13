@@ -56,13 +56,13 @@ render () {
             <h1>eD</h1>
             <h2>Let's get started</h2>
             <p>Enter your info to {formType} or <em>{navLink}</em></p>
-            <label className="login-input-label">Username<br />
+            <label className="login-input-label">Username
                 <input value={this.state.username}
                 onChange={this.update('username')}
                 placeholder=" Enter Username"
                 className="login-input" />
-            </label><br />
-            <label className="login-input-label">Password<br />
+            </label>
+            <label className="login-input-label">Password
                 <input type="password"
                 placeholder=" Enter Password" 
                 value={this.state.password} 
@@ -73,11 +73,11 @@ render () {
             <button 
                 className="login-button first"
                 onClick={this.handleSubmit}
-                >Get Started</button><br />
+                >Get Started</button>
             <button 
                 className="login-button"
                 onClick={this.demoUser}
-                >Demo</button><br />
+                >Demo</button>
         </form>
         </div>
     )}

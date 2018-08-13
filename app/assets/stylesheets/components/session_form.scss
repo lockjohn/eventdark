@@ -1,11 +1,17 @@
 .form-container {
-position: fixed;
-top: 38%;
-left: 50%;
-transform: translate(-50%, -50%);
+margin: 0 auto;
+width: 35%;
+// top: 38%;
+// left: 50%;
+// transform: translate(-50%, -50%);
 }
 
 .session-form {
+// position: fixed;
+// top: 100;
+// left: 30%;
+margin: 100px 0;
+box-sizing: border-box;
 display: flex;
 flex-direction: column;
 align-items: stretch;
@@ -59,6 +65,8 @@ color: #45494e;
     border: 1px solid rgb(210, 214, 223);
     width: 100%;
     height: 40px;
+    padding: 0 5px;
+    margin: 10px 0;
 }
 
 .login-input:focus {
@@ -73,7 +81,8 @@ color: #45494e;
 }
 
  .login-button.first{
-    margin-top: 20px;
+    // margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 .login-button {

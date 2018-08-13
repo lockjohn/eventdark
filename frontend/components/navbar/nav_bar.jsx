@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarGreeting from './nav_bar_greeting';
+import { Link } from 'react-router-dom';
 
 //will render header with navigation, search, event link, greeting vs session-forms
 
@@ -23,7 +24,8 @@ const NavBar = (props) => (
                 logout={props.logout} />
             </div>
                 <div className="nav-link media-nav">
-                <a className="create-event">CREATE EVENT</a>
+                    <Link to="/events/new"> <span className="create-event">Create Event</span> </Link>
+                {/* <a className="create-event">CREATE EVENT</a> */}
             </div>
         </div>
       </nav>
