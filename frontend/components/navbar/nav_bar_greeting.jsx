@@ -25,7 +25,7 @@ const NavBarGreeting = ({ currentUser, logout }) => {
 
     const sessionLink = () => (
         <div className="nav-link"> 
-            <Link to="/login">Sign In</Link>
+            <Link className="nav-link-item" to="/login">Sign In</Link>
         </div>
     );
 

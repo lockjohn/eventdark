@@ -16,7 +16,7 @@ const NavBar = (props) => (
         </div> 
         <div className="nav-right">
             <div className="nav-link media-nav">
-                <a href="">BROWSE EVENTS</a>
+                <Link className="nav-link-item" to="/"> BROWSE EVENTS</Link>
             </div>
             <div className="nav-link dropdown-trip">
                 <NavBarGreeting 
@@ -24,7 +24,7 @@ const NavBar = (props) => (
                 logout={props.logout} />
             </div>
                 <div className="nav-link media-nav">
-                    <Link to="/events/new"> <span className="create-event">Create Event</span> </Link>
+                    <Link className="nav-link-item" to="/events/new"> <span className="create-event">Create Event</span> </Link>
                 {/* <a className="create-event">CREATE EVENT</a> */}
             </div>
         </div>

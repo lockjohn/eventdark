@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     const defaultEvent = {
         name: '',
         description: '',
-        price: 'FREE',
+        price: 0,
         date: '', time: '',
         capacity: 0,
         organizer: currentUser.username,
@@ -19,8 +19,9 @@ const mapStateToProps = (state, ownProps) => {
     };
     const event = state.entities.events[ownProps.match.params.eventId] || defaultEvent;
     const formType = 'Update Event';
-
-    return { event, formType , currentUserId, currentUser};
+    const errors = state.errors.events
+    // debugger;
+    return { event, formType , errors};
 };
 
 const mapDispatchToProps = dispatch => {
@@ -32,28 +33,25 @@ const mapDispatchToProps = dispatch => {
 
 class EditEventForm extends React.Component {
     componentDidMount() {
+        console.log("mount")
         this.props.fetchEvent(this.props.match.params.eventId);
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.event.id != nextProps.match.params.eventId) {
-            this.props.fetchEvent(nextProps.match.params.eventId);
-        }
-    }
+
 
     render() {
-        const { action, formType, event } = this.props;
-        
-        if (user.user ) {
-            <Redirect to="/"/>
-        }
-        else {
+        const { action, formType, event, errors } = this.props;
+        // if (user.user ) {
+        //     <Redirect to="/"/>
+        // }
+        // else {
         return (
             <EventForm
                 action={action}
                 formType={formType}
-                event={event} />
-        );}
+                event={event}
+                errors={errors} />
+        );
     }
 }
 

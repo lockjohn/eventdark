@@ -5,7 +5,15 @@ class EventForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        debugger;
         this.state = this.props.event;
+    }
+    componentWillReceiveProps(nextProps) {
+        if (this.props.event.id != nextProps.match.params.eventId) {
+            console.log("receive")
+            // this.props.fetchEvent(nextProps.match.params.eventId);
+            this.setState(nextProps.event);
+        }
     }
 
     update(field) {
@@ -21,55 +29,63 @@ class EventForm extends React.Component {
 
     render() {
         return (
-            <div className="event-form"> Event Form
+            <div className="event-form-wrapper">
+                <div className="event-form"> <h1>Event Details</h1>
                 <h3>{this.props.formType}</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Event Name
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Event Name
                          <input
-                            required
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.update('name')} />
-                    </label>
+                                required
+                                type="text"
+                                value={this.state.name}
+                                placeholder="Name your event"
+                                onChange={this.update('name')} />
+                        </label>
 
-                    <label>Event Description
+                        <label>Event Description
                         <textarea
-                            required
-                            value={this.state.description}
-                            onChange={this.update('description')} />
-                    </label>
+                                rows="10"
+                                cols="75"
+                                required
+                                placeholder="Describe your event"
+                                value={this.state.description}
+                                onChange={this.update('description')} />
+                        </label>
 
-                    <label>Event Capacity
+                        <label>Event Capacity
                          <input
-                            required
-                            type="number"
-                            value={this.state.capacity}
-                            onChange={this.update('capacity')} />
-                    </label>
-                    <label>Ticket Price
+                                required
+                                type="number"
+                                placeholder="Max capacity"
+                                value={this.state.capacity}
+                                onChange={this.update('capacity')} />
+                        </label>
+                        <label>Ticket Price
                          <input
-                            required
-                            type="number"
-                            value={this.state.price}
-                            onChange={this.update('price')} />
-                    </label>
-                    <label>Date
+                                required
+                                type="number"
+                                placeholder="If free, enter 0"
+                                value={this.state.price}
+                                onChange={this.update('price')} />
+                        </label>
+                        <label>Date
                          <input
-                            required
-                            type="date"
-                            value={this.state.date}
-                            onChange={this.update('date')} />
-                    </label>
-                    <label>Time
+                                required
+                                type="date"
+                                value={this.state.date}
+                                onChange={this.update('date')} />
+                        </label>
+                        <label>Time
                          <input
-                            required
-                            type="time"
-                            value={this.state.time}
-                            onChange={this.update('time')} />
-                    </label>
+                                required
+                                type="time"
+                                value={this.state.time}
+                                onChange={this.update('time')} />
+                        </label>
 
-                    <input type="submit" value={this.props.formType} />
-                </form>
+                        <input placeholder="MAKE YOUR EVENT LIVE" className="event-form-button" type="submit" value={this.props.formType} />
+                    </form>
+                </div>
             </div>
         );
     }
