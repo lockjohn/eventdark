@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
         organizer: currentUser.username,
         organizerDescription: currentUser.organizer_description || '',
     };
-    const event = state.events[ownProps.match.params.eventtId] || defaultEvent;
+    const event = state.entities.events[ownProps.match.params.eventId] || defaultEvent;
     const formType = 'Update Event';
 
     return { event, formType , currentUserId, currentUser};

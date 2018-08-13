@@ -1,0 +1,20 @@
+.event-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: tomato 1px solid;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px 45px;
+    input {
+        box-sizing: border-box;
+        margin: 20px 0;
+        display: block;
+        border: tomato 1px solid;
+    }
+    textarea {
+        margin: 20px 0;
+        display: block;
+        border: tomato 1px solid;
+    }
+}

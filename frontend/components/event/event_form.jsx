@@ -21,7 +21,7 @@ class EventForm extends React.Component {
 
     render() {
         return (
-            <div> Event Form
+            <div className="event-form"> Event Form
                 <h3>{this.props.formType}</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Event Name

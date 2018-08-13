@@ -16,7 +16,7 @@ const NavBarGreeting = ({ currentUser, logout }) => {
                     <li className="dropdown-list-item">Browse Events</li>
                     <li className="dropdown-list-item">Tickets</li>
                     <li className="dropdown-list-item"> Organizer Profile</li>
-                    <li className="dropdown-list-item">  <span onClick={logout}> Log Out</span> </li>
+                    <li className="dropdown-list-item">  <a onClick={logout}>Log Out</a> </li>
                 </ul>
             
             </div>
