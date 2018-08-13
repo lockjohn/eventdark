@@ -16,11 +16,10 @@ const receiveEvent = (event) => {
         event
     }
 }
-const eventErrors = () => {
+const eventErrors = (errors) => {
     return {
         type: EVENT_ERRORS,
-        errors: ["Apologies, that event is no longer available", 
-        "Please fill out all required fields"]
+        errors
      }
 }
 

@@ -5,7 +5,6 @@ class EventForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        debugger;
         this.state = this.props.event;
     }
     componentWillReceiveProps(nextProps) {
@@ -22,6 +21,19 @@ class EventForm extends React.Component {
         };
     }
 
+    renderErrors() {
+        return (
+            <ul className="login-errors">
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state).then(() => this.props.history.push('/'));
@@ -32,6 +44,7 @@ class EventForm extends React.Component {
             <div className="event-form-wrapper">
                 <div className="event-form"> <h1>Event Details</h1>
                 <h3>{this.props.formType}</h3>
+                    {this.renderErrors()}
                     <form onSubmit={this.handleSubmit}>
                         <label>Event Name
                          <input
@@ -82,7 +95,7 @@ class EventForm extends React.Component {
                                 value={this.state.time}
                                 onChange={this.update('time')} />
                         </label>
-
+                        
                         <input placeholder="MAKE YOUR EVENT LIVE" className="event-form-button" type="submit" value={this.props.formType} />
                     </form>
                 </div>

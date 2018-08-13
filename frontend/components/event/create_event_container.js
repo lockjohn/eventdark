@@ -10,13 +10,12 @@ const mapStateToProps = (state, ownProps) => {
         description: '',
         price: 'FREE',
         date: '', time: '',
-        capacity: 0, 
-        organizer: user.username,
-        organizerDescription: user.organizer_description || '',
+        capacity: 0,
     };
+    const errors = state.errors.eventErrors
     const formType = 'Create Event';
 
-    return { event, formType };
+    return { event, formType, errors };
 };
 
 const mapDispatchToProps = (dispatch) => {
