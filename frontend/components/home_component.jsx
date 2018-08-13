@@ -13,14 +13,14 @@ class Home extends React.Component  {
 
         return (
         <div className="home-page-wrapper">
-            <HomeCarousel />
-            {/* <div className="home-hero"> */}
-                
-             </div>
-             <div className="event-index-wrapper"> 
-                 <div className="home-search-container"> 
-                    <h1>Find your next experience</h1>
-                    <form className="home-search-form">
+                <div className="home-hero">
+                    <HomeCarousel />
+                </div>
+            {/* <div className="home-hero"> /* </div> */}
+                 <div className="event-index-wrapper"> 
+                     <div className="home-search-container"> 
+                        <h1>Find your next experience</h1>
+                        <form className="home-search-form">
                         <input className="search-input-field" type="text" name="" id=""/>
                         <input className="search-button" type="submit"/>
                     </form>

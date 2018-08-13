@@ -28,7 +28,7 @@ class EventShow extends React.Component {
                     <div className="event-info">
                         <div className="event-hero-wrapper">
                             <div className="hero-img">
-                                <img src={window.herotest1} alt="" />
+                                <img src={window.pic2} alt="" />
                             </div>
                             <div className="hero-detail">
                                 <div className="upper-half">
