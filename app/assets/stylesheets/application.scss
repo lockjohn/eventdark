@@ -10,23 +10,25 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_self
+ *= require carousel
  */
- /* CSS Reset */
- @import "base/reset.scss";
+
+
+/* CSS Reset */
+@import "base/reset.scss";
 /* core */
 @import "base/font.scss";
 @import "base/colors.scss";
 @import "base/layout.scss";
 
- /* components */
+/* components */
  @import "components/navbar.scss";
  @import "components/session_form.scss";
  @import "components/event_show.scss";
  @import "components/home.scss";
  @import "components/event_index.scss";
- @import "components/carousel.css";
- @import "components/main.css";
+ @import "carousel.css";
+ @import "main.css";
  @import "components/event_form.css";
  
- 
+
