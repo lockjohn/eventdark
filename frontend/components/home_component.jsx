@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndex from './event/event_index';
+import HomeCarousel from './home_carousel';
 
 class Home extends React.Component  {
    
@@ -12,7 +13,8 @@ class Home extends React.Component  {
 
         return (
         <div className="home-page-wrapper">
-            <div className="home-hero">
+            <HomeCarousel />
+            {/* <div className="home-hero"> */}
                 
              </div>
              <div className="event-index-wrapper"> 
