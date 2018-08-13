@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
         date: '', time: '',
         capacity: 0,
     };
-    const errors = state.errors.eventErrors
+    const errors = state.errors.eventErrors || [];
     const formType = 'Create Event';
 
     return { event, formType, errors };

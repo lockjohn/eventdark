@@ -22,6 +22,7 @@ class EventForm extends React.Component {
     }
 
     renderErrors() {
+        if (this.props.errors.length > 0){
         return (
             <ul className="login-errors">
                 {this.props.errors.map((error, i) => (
@@ -30,7 +31,7 @@ class EventForm extends React.Component {
                     </li>
                 ))}
             </ul>
-        );
+        )};
     }
 
 
