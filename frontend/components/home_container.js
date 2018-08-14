@@ -3,7 +3,6 @@ import {fetchAllEvents} from '../actions/event_actions';
 import Home from './home_component';
 
 const msp = (state, ownProps) => {
-    console.log(state)
     console.log(state.entities)
     return {
         entities: state.entities,

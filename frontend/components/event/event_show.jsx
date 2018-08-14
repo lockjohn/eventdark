@@ -17,8 +17,16 @@ class EventShow extends React.Component {
     render() {
         // debugger
         const { event } = this.props;
+        let available;
+       
 
         if (!event) return null; // so component can mount and fetch
+
+        if (event.available === 'sold_out') {
+            available = "Sold Out"
+        } else {
+            available = event.available
+        }
 
         return (
             <div className="outermost-div">
@@ -33,8 +41,10 @@ class EventShow extends React.Component {
                             <div className="hero-detail">
                                 <div className="upper-half">
                                     <div className="cal-date">
-                                        <a><p>AUG</p>
-                                            <p className="cal-date-num">18</p></a>
+                                        <a>
+                                            <p>AUG</p>
+                                            <p className="cal-date-num">18</p>
+                                        </a>
                                     </div>
                                     <div className="detail-title">
                                         <h1>{event.name}</h1>
@@ -42,6 +52,7 @@ class EventShow extends React.Component {
                                 </div>
                                 <div className="lower-half">
                                     <div>${event.price}</div>
+                                    <div>{available}</div>
                                 </div>
                             </div>
                         </div>

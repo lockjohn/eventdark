@@ -5,11 +5,12 @@ class Api::RegistrationsController < ApplicationController
         @user = current_user
         @registration.user_id = @user.id
         event = Event.find(params[:event_id])
-        unless event.sold_out?
+        if event.sold_out?
+            debugger
+            render json: ["The event is sold out, we'll contact you if space becomes available"], status: 422
+        else
             @registration.save!
             render "api/users/show" #send this info back to update user show page with new registration
-        else
-            render json: ["The event is sold out, we'll contact you if space becomes available"]
         end
     end
 

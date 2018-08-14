@@ -25,15 +25,15 @@ export const createRegistration = event => dispatch => {
     return (
       newRegistration(event)
       .then(userinfo => dispatch(receiveUserTickets(userinfo)), 
-        err => dispatch(registrationError(err.responseJSON)))
+            (err) => dispatch(registrationError(err.responseJSON)))
     )
 }
 
-//needs id from current_user aka session.id
-export const showRegistrations = id => dispatch => {
+
+export const showRegistrations = (id) => dispatch => {
     return (
-        usersRegistrations(id)
-        .then(userinfo => dispatch(receiveUserTickets(userinfo)),
-          err => dispatch(registrationError(err.responseJSON)))
+        EventAPIUtil.showRegistrations(id)
+            .then(userInfo => dispatch(receiveUserTickets(userInfo)),
+                (err) => { return dispatch(registrationError(err.responseJSON)) })
     )
 }

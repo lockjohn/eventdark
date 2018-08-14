@@ -83,7 +83,7 @@
 
 .event-description {
     width: 60%;
-    margin-right: 25px;
+    
 }
 
 .event-detail {
@@ -255,6 +255,11 @@ maxwidth of  */
 
 .cal-date {
     display: block;
+      a {
+       display: block;
+
+       p { display: block;}
+    } 
 }
 .cal-date > a{
     font-size: .8em;
@@ -285,7 +290,7 @@ maxwidth of  */
 .lower-half {
     // background-color: green;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .detail-title {
@@ -299,6 +304,9 @@ maxwidth of  */
         line-height: 25px;
         padding: 10px 0;
         margin: 5px 0;
+    }
+    a {
+        padding: 10px 0;
     }
 }
 
@@ -325,8 +333,13 @@ maxwidth of  */
   justify-content: space-around;
 }
 
+.event-description {
+    // width: 62%;
+}
 .event-detail{
+    width: 20%;
     margin-right: 100px;
+    padding-right: 45px;
 }
 
 .event-show-background {
