@@ -9,7 +9,6 @@ class EventForm extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         if (this.props.event.id != nextProps.match.params.eventId) {
-            console.log("receive")
             // this.props.fetchEvent(nextProps.match.params.eventId);
             this.setState(nextProps.event);
         }

@@ -31,7 +31,6 @@ const mapDispatchToProps = dispatch => {
 
 class EditEventForm extends React.Component {
     componentDidMount() {
-        console.log("mount")
         this.props.fetchEvent(this.props.match.params.eventId);
     }
 
@@ -39,10 +38,7 @@ class EditEventForm extends React.Component {
 
     render() {
         const { action, formType, event, errors } = this.props;
-        // if (user.user ) {
-        //     <Redirect to="/"/>
-        // }
-        // else {
+      
         return (
             <EventForm
                 action={action}

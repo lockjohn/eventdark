@@ -23,6 +23,12 @@ const eventErrors = (errors) => {
      }
 }
 
+export const clearErrors = () => {
+    return {
+        type: CLEAR_ERRORS,
+    }
+}
+
 export const fetchAllEvents = () => dispatch => {
     return ( 
     EventAPIUtil.fetchEvents()

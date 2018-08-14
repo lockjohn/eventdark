@@ -7,6 +7,14 @@ export const newRegistration = (event) => {
     })
 }
 
+//will need to pass in session.id from state
+export const usersRegistrations = (id) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/users/${id}`
+    })
+}
+
 // export default newRegistration;
 
 //will return user show json with user info plus registration

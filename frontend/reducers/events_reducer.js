@@ -1,7 +1,6 @@
 import { 
     RECEIVE_ALL_EVENTS, 
     RECEIVE_EVENT,
-    EVENT_ERROR
 } from '../actions/event_actions';
 import { merge } from 'lodash';
 

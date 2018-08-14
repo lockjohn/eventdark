@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {createRegistration} from './actions/registration_actions';
+import {createRegistration, showRegistrations} from './actions/registration_actions';
 import { fetchAllEvents,fetchEvent,createEvent, updateEvent } from './actions/event_actions';
 import configureStore from "./store/store";
 import Root from './components/root';
@@ -29,6 +29,7 @@ window.fetchAllEvents = fetchAllEvents;
 window.createEvent = createEvent;
 window.updateEvent = updateEvent;
 window.createRegistration = createRegistration;
+window.showRegistrations = showRegistrations;
 window.getState = store.getState;
 window.dispatch = store.dispatch;
 })
