@@ -27,3 +27,12 @@ export const updateEvent = (event) => {
         data: { event }
     })
 }
+
+//registration ajax call nested under events routes
+
+export const createRegistration = (event) => {
+    return $.ajax({
+        method: 'POST',
+        url: `/api/events/${event.id}/registrations`,
+    })
+}
