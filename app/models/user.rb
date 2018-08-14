@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                    :bigint(8)        not null, primary key
+#  username              :string           not null
+#  password_digest       :string           not null
+#  session_token         :string           not null
+#  organizer             :boolean          default(FALSE)
+#  organizer_description :string
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#
+
 class User < ApplicationRecord
     validates :username, :password_digest, :session_token, presence: true
     validates :username, uniqueness: true
@@ -8,6 +22,9 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :events, class_name: :Event, foreign_key: "organizer_id"
+    has_many :registrations, class_name: :Registration, foreign_key: "user_id"
+    has_many :tickets, through: :registrations, source: :event
+
     has_one_attached :avatar
 
     def self.find_by_credentials(username, password)
