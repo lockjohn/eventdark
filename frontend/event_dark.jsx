@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {createRegistration} from './util/event_api_util';
+import {createRegistration} from './actions/registration_actions';
 import { fetchAllEvents,fetchEvent,createEvent, updateEvent } from './actions/event_actions';
 import configureStore from "./store/store";
 import Root from './components/root';
