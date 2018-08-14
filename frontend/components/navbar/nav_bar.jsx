@@ -8,8 +8,7 @@ const NavBar = (props) => (
     <header className="nav-header"> 
       <nav className="nav">
         <div className="nav-left">
-            <a className="logo">eventDark
-            </a>
+            <Link className="logo" to="/">eventDark</Link>
             <div className="search-bar">
                 
             </div>

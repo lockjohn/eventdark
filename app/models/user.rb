@@ -8,6 +8,7 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :events, class_name: :Event, foreign_key: "organizer_id"
+    has_one_attached :avatar
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
