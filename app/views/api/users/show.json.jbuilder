@@ -2,7 +2,7 @@
 
 json.user do
     json.partial! "./api/users/user", user: @user
-    json.userImgUrl url_for(@user.avatar)
+    # json.userImgUrl url_for(@user.avatar)
     json.totalTickets @user.registrations.count
 # json.registrations @user.registrations.id #total ticket count over all events
 end

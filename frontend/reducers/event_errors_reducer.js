@@ -12,8 +12,8 @@ export default (state = _nullErrors, action) => {
     Object.freeze(state);
     switch (action.type) {
         case EVENT_ERRORS:
-              
-            return action.errors;
+        console.log("action errors", action.errors)
+           return Object.assign([], state, action.errors);
         case RECEIVE_ALL_EVENTS:
         case RECEIVE_EVENT:
         case CLEAR_ERRORS:

@@ -5,10 +5,10 @@ export const REMOVE_CURRENT_USER = 'REMOVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
-const receiveCurrentUser = (currentUser) => {
+const receiveCurrentUser = (payload) => {
     return {
         type: RECEIVE_CURRENT_USER,
-        currentUser
+        payload
     }
 }
 
@@ -32,15 +32,15 @@ export const clearErrors = () => {
 }
 
 export const signup = user => dispatch => (
-    SessionAPIUtil.signup(user).then( currentUser => dispatch(
-        receiveCurrentUser(currentUser)), 
+    SessionAPIUtil.signup(user).then( payload => dispatch(
+        receiveCurrentUser(payload)), 
         err => (dispatch(receiveErrors(err.responseJSON)))
         )
 );
 
 export const login = user => dispatch=> {
-    return ( SessionAPIUtil.login(user).then(currentUser =>{return(dispatch(
-        receiveCurrentUser(currentUser)))}, err => {
+    return ( SessionAPIUtil.login(user).then(payload =>{return(dispatch(
+        receiveCurrentUser(payload)))}, err => {
          return (  dispatch(receiveErrors(err.responseJSON)))
         }
     ));

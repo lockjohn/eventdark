@@ -1,10 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import {formatDate, formatTime} from '../../util/date_util';
 
 class EventForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         this.state = this.props.event;
     }
     componentWillReceiveProps(nextProps) {
@@ -36,10 +38,29 @@ class EventForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(() => this.props.history.push('/'));
+        console.log(this.props.formType);
+        const form = new FormData();
+        form.append('event[name]', this.state.name)
+        form.append('event[description]', this.state.description)
+        form.append('event[price]', this.state.price)
+        form.append('event[date]', this.state.date)
+        form.append('event[time]', this.state.time)
+        form.append('event[capacity]', this.state.capacity)
+        form.append('event[photo]', this.state.photoFile)
+        if (this.props.formType ==='Update Event') {
+            console.log(form);
+            form.append('event[id]', this.props.match.params.eventId)
+        }
+        this.props.action(form).then(() => this.props.history.push('/'));
+    }
+
+    handleFile(e) {
+        this.setState({photoFile: e.currentTarget.files[0]});
     }
 
     render() {
+        this.setState({[event.date]: formatDate(this.props.event.date)})
+        this.setState({[event.time]: fromatTime(this.props.event.time)})
         return (
             <div className="event-form-wrapper">
                 <div className="event-form"> <h1>Event Details</h1>
@@ -63,6 +84,14 @@ class EventForm extends React.Component {
                                 placeholder="Describe your event"
                                 value={this.state.description}
                                 onChange={this.update('description')} />
+                        </label>
+
+                        <label>Event Photo
+                         <input
+                                required
+                                type="file"
+                                placeholder="Upload a photo for your event"
+                                onChange={this.handleFile} />
                         </label>
 
                         <label>Event Capacity

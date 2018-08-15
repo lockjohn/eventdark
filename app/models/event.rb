@@ -21,7 +21,7 @@ class Event < ApplicationRecord
     
     belongs_to :organizer, class_name: :User, foreign_key: :organizer_id
     has_many :attendees, class_name: :Registration, foreign_key: "event_id"
-   
+    has_one_attached :photo
 
     def self.find_by_id(id)
         @event = Event.find(id)

@@ -5,7 +5,12 @@ import { formatDateTime } from '../../util/date_util';
 const EventIndexItem = ({event}) => (
  <Link to={`/events/${event.id}`}>   
     <div className="ei-item"> 
-            <div className="ei-item-img"> 
+            <div className="ei-item-img"
+            style={ 
+                {
+                backgroundImage: `url(${event.photoUrl})`
+                }
+            }> 
                 <div className="ei-item-price">${event.price}</div>
             </div>
             <div className="ei-item-body"> 

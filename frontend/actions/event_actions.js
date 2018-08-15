@@ -43,16 +43,16 @@ export const fetchEvent = (id) => dispatch => {
             (err) => {return dispatch(eventErrors(err.responseJSON))})
     )
 }
-export const createEvent = (event) => dispatch => {
+export const createEvent = (form) => dispatch => {
     return ( 
-    EventAPIUtil.createEvent(event)
+    EventAPIUtil.createEvent(form)
     .then(fetchedEvent =>dispatch(receiveEvent(fetchedEvent)), 
     (err) => dispatch(eventErrors(err.responseJSON)))
     )
 }
-export const updateEvent = (event) => dispatch => {
+export const updateEvent = (form) => dispatch => {
     return ( 
-    EventAPIUtil.updateEvent(event)
+    EventAPIUtil.updateEvent(form)
     .then(fetchedEvent =>dispatch(receiveEvent(fetchedEvent)), 
     (err) => dispatch(eventErrors(err.responseJSON)))
     )

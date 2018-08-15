@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
         price: 0,
         date: '', time: '',
         capacity: 0,
+        photoFile: '',
     };
     const event = state.entities.events[ownProps.match.params.eventId] || defaultEvent;
     const formType = 'Update Event';

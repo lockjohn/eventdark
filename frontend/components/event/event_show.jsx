@@ -18,7 +18,9 @@ class EventShow extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createRegistration(this.props.event);
+        this.props.createRegistration(this.props.event)
+            .then(() => this.props.history.push('/events/tickets'));
+        //history push to user tix show page
     }
 
     handleChange(e) {
@@ -71,16 +73,24 @@ class EventShow extends React.Component {
             available = event.available
             //  `${available} remaining`
         }
+        console.log("available is:", available);
+        //make constant of the two possible html tags
+        // use ternary to set max based on avaiable and then use max for i < max loop
 
         return (
             <div className="outermost-div">
-            <div className="event-show-background"></div>
+            <div className="event-show-background"
+            style={
+                {
+                    backgroundImage: `url(${event.photoUrl})`
+                }
+            }></div>
             <div className="event-show-background-boundary"></div>
                 <div className="event-info-wrapper">
                     <div className="event-info">
                         <div className="event-hero-wrapper">
                             <div className="hero-img">
-                                <img src={window.pic2} alt="" />
+                                <img src={event.photoUrl} alt="" />
                             </div>
                             <div className="hero-detail">
                                 <div className="upper-half">
@@ -96,7 +106,7 @@ class EventShow extends React.Component {
                                 </div>
                                 <div className="lower-half">
                                     <div>${event.price}</div>
-                                    <div>{available}</div>
+                                    <div>{available} remaining</div>
                                 </div>
                             </div>
                         </div>

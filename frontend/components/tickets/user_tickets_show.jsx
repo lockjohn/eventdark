@@ -12,7 +12,11 @@ class UserTickets extends React.Component {
 
         return (
             <div className="user-show-page-wrapper">
-                <div className="user-show-background"><img src={user.userImgUrl} /></div>
+                <div className="user-show-background"
+                style={
+                    { backgroundImage: `url(${user.userImgUrl})` }
+                }
+                ></div>
                 <div className="user-show-background-boundary"></div>
                 <div className="user-tix-show-wrapper">
                     <section className="user-show-container">

@@ -16,6 +16,7 @@ margin: 0 auto;
     height: 343.5;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
 	box-sizing: border-box;
+	border: none;
 	display: block;
 	// margin: 15px;
 	position: relative;
@@ -27,7 +28,7 @@ margin: 0 auto;
 }
 .ei-item-img
 {
-    background-image: image-url('pic3.jpg');
+    // background-image: image-url('pic3.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -41,7 +42,7 @@ margin: 0 auto;
 .ei-item-price
 {
 	background: white;
-	box-shadow: 0 0 1px 0 rgba(0,0,0,0.15);
+	// box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
 	color: $dark-gray;
 	font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
 	font-size: 12px;

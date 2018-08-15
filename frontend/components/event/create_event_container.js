@@ -8,9 +8,10 @@ const mapStateToProps = (state, ownProps) => {
     const event = { 
         name: '', 
         description: '',
-        price: 'FREE',
+        price: 0,
         date: '', time: '',
         capacity: 0,
+        photoFile: '',
     };
     const errors = state.errors.eventErrors || [];
     const formType = 'Create Event';
