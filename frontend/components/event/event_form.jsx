@@ -8,6 +8,7 @@ class EventForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.state = this.props.event;
+        this.state.time = formatTime(this.state.time);
     }
     componentWillReceiveProps(nextProps) {
         if (this.props.event.id != nextProps.match.params.eventId) {
