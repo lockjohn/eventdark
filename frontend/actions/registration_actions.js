@@ -5,10 +5,10 @@ export const REGISTRATION_ERROR = "REGISTRATION_ERROR"
 
 
 //this will go to users reducer and update user's slice of state 
-const receiveUserTickets = (user) => {
+const receiveUserTickets = (payload) => {
     return {
         type: RECEIVE_USER_TICKETS,
-        user
+        payload
     }
 }
 
@@ -25,14 +25,14 @@ export const createRegistration = event => dispatch => {
     return (
       newRegistration(event)
       .then(userinfo => dispatch(receiveUserTickets(userinfo)), 
-            (err) => dispatch(registrationError(err.responseJSON)))
+            (err) => { console.log(err); return dispatch(registrationError(err.responseJSON))})
     )
 }
 
 
 export const showRegistrations = (id) => dispatch => {
     return (
-        EventAPIUtil.showRegistrations(id)
+        usersRegistrations(id)
             .then(userInfo => dispatch(receiveUserTickets(userInfo)),
                 (err) => { return dispatch(registrationError(err.responseJSON)) })
     )

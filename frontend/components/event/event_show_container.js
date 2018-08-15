@@ -4,13 +4,13 @@ import EventShow from './event_show';
 import { fetchEvent } from '../../actions/event_actions';
 import { createRegistration } from '../../actions/registration_actions';
 
-const msp = (state, { match }) => {
-    // debugger
+const msp = ({entities,errors}, { match }) => {
     const eventId = parseInt(match.params.eventId);
-    const event = state.entities.events[eventId];
+    const event = entities.events[eventId];
     return {
         eventId,
-        event
+        event,
+        errors: Object.values(errors.registration)
     }
 }
 

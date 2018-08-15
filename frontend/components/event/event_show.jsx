@@ -12,6 +12,17 @@ class EventShow extends React.Component {
 
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createRegistration(this.props.event);
+    }
+
+    handleChange(e) {
+        this.setState( {value: e.target.value})
     }
 
     handleOpenModal () {
@@ -31,6 +42,21 @@ class EventShow extends React.Component {
         this.props.fetchEvent(this.props.eventId);
     }
 
+    renderErrors() {
+       
+        if (this.props.errors.length > 0) {
+            return (
+                <ul className="login-errors registration-errors">
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            )
+        };
+    }
+
     render() {
         const { event } = this.props;
         let available;
@@ -43,7 +69,7 @@ class EventShow extends React.Component {
             // select = "Sold Out"
         } else {
             available = event.available
-            return `${available} remaining`
+            //  `${available} remaining`
         }
 
         return (
@@ -97,7 +123,7 @@ class EventShow extends React.Component {
                                             <div className="tix-select">
                                                 <select className="tix-select-input" 
                                                     value={this.state.value} onChange={this.handleChange}>
-                                                    <option selected value="1">1</option>
+                                                    <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
                                                     <option value="4">4</option>
@@ -105,11 +131,12 @@ class EventShow extends React.Component {
                                                 </select>
                                             </div>
                                     </section>
+                                    {this.renderErrors()}
+                                    
                                     <section className="tix-modal-footer">
-                                       <p>Quantity: {(this.state.value)}</p> 
-                                       <p>Total: {(this.state.value) * event.price}</p> 
-                                       <Link to="events/tickets"> <button onClick={this.props.createRegistration(event.id)} className="modal-bttn register-button">Check Out</button>
-                                        </Link>
+                                       <p>Quantity: {this.state.value}</p> 
+                                       <p>Total: {this.state.value * event.price}</p> 
+                                       <button onClick={this.handleSubmit} className="modal-bttn register-button">Check Out</button>
                                     </section>
                                 </div>
                             </ReactModal>

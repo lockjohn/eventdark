@@ -7,7 +7,7 @@ export default (state = _nullErrors, action) => {
     Object.freeze(state);
     switch (action.type) {
         case REGISTRATION_ERROR:
-            return action.error;
+            return Object.assign({},action.error);
         case RECEIVE_USER_TICKETS:
             return _nullErrors;
         default:

@@ -19,7 +19,8 @@ componentDidMount() {
     this.props.clearErrors();
 }
 
-demoUser() {
+demoUser(e) {
+    e.preventDefault();
     this.props.login({username: "Dolores", password: "123456"});
 }
 

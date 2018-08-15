@@ -8,7 +8,7 @@ const usersReducer = (state={}, action) => {
         case RECEIVE_CURRENT_USER:
             return merge({}, state, { [action.currentUser.id]: action.currentUser})
         case RECEIVE_USER_TICKETS:
-            return merge({}, state, { [action.user.id]: action.user } ) //think this will just nest tix info under user
+            return merge({}, state, { [action.payload.user.id]: action.payload.user } ) //think this will just nest tix info under user
         default:
             return state;
     }

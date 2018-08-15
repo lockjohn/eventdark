@@ -13,6 +13,7 @@ import EventShowContainer from './event/event_show_container';
 import HomeContainer from './home_container';
 import CreateEventContainer from './event/create_event_container';
 import EditEventContainer from './event/edit_event_container';
+import UserTicketsContainer from './tickets/user_tickets_container';
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
@@ -24,6 +25,7 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer}/>
         <ProtectedRoute exact path="/events/new" component={CreateEventContainer}/>
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
+        <ProtectedRoute exact path="/events/tickets" component={UserTicketsContainer} />
         <Route path="/events/:eventId" component={EventShowContainer} />
         <Route component={HomeContainer} />
         <Route path='*' component={LoginFormContainer} />
