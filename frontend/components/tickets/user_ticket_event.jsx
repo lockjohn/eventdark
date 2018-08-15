@@ -5,7 +5,12 @@ import { formatDateTime } from '../../util/date_util';
 const UserTicketEvent = ({ ticket }) => (
     <Link to={`/events/${ticket.id}`}>
         <div className="ei-item">
-            <div className="ei-item-img">
+            <div className="ei-item-img"
+                style={
+                    {
+                        backgroundImage: `url(${ticket.photoUrl})`
+                    }
+                }>
                 <div className="ei-item-price">${ticket.price}</div>
             </div>
             <div className="ei-item-body">
