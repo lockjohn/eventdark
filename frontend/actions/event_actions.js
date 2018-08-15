@@ -50,9 +50,9 @@ export const createEvent = (form) => dispatch => {
     (err) => dispatch(eventErrors(err.responseJSON)))
     )
 }
-export const updateEvent = (form) => dispatch => {
+export const updateEvent = (form, id) => dispatch => {
     return ( 
-    EventAPIUtil.updateEvent(form)
+    EventAPIUtil.updateEvent(form,id)
     .then(fetchedEvent =>dispatch(receiveEvent(fetchedEvent)), 
     (err) => dispatch(eventErrors(err.responseJSON)))
     )

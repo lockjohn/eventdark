@@ -22,11 +22,14 @@ export const createEvent = (form) => {
     })
 }
 
-export const updateEvent = (form) => {
+export const updateEvent = (form,id) => {
+    debugger
     return $.ajax({
         method: 'PATCH',
-        url: `/api/events/${event.id}`,
-        data: { event }
+        url: `/api/events/${id}`,
+        data: form,
+        contentType: false,
+        processData: false
     })
 }
 

@@ -51,7 +51,7 @@ class EventForm extends React.Component {
             console.log(form);
             form.append('event[id]', this.props.match.params.eventId)
         }
-        this.props.action(form).then(() => this.props.history.push('/'));
+        this.props.action(form, this.props.match.params.eventId).then(() => this.props.history.push('/'));
     }
 
     handleFile(e) {
@@ -59,8 +59,8 @@ class EventForm extends React.Component {
     }
 
     render() {
-        this.setState({[event.date]: formatDate(this.props.event.date)})
-        this.setState({[event.time]: fromatTime(this.props.event.time)})
+        // this.setState({[event.date]: formatDate(this.props.event.date)})
+        // this.setState({[event.time]: formatTime(this.props.event.time)})
         return (
             <div className="event-form-wrapper">
                 <div className="event-form"> <h1>Event Details</h1>
@@ -88,7 +88,6 @@ class EventForm extends React.Component {
 
                         <label>Event Photo
                          <input
-                                required
                                 type="file"
                                 placeholder="Upload a photo for your event"
                                 onChange={this.handleFile} />
@@ -114,18 +113,18 @@ class EventForm extends React.Component {
                          <input
                                 required
                                 type="date"
-                                value={this.state.date}
+                                value={formatDate(this.state.date)}
                                 onChange={this.update('date')} />
                         </label>
                         <label>Time
                          <input
                                 required
                                 type="time"
-                                value={this.state.time}
+                                value={formatTime(this.state.time)}
                                 onChange={this.update('time')} />
                         </label>
                         
-                        <input placeholder="MAKE YOUR EVENT LIVE" className="event-form-button" type="submit" value={this.props.formType} />
+                        <input className="event-form-button" type="submit" value={this.props.formType} />
                     </form>
                 </div>
             </div>
