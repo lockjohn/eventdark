@@ -1,7 +1,26 @@
 import React from 'react';
+import ReactModal from 'react-modal';
+import {Link} from 'react-router-dom';
 
 class EventShow extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            showModal: false,
+            value: 1,
+        }
 
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+
+    handleOpenModal () {
+        this.setState({showModal: true})
+    }
+
+    handleCloseModal () {
+        this.setState({showModal: false})
+    }
 
     componentWillReceiveProps(ownProps) {
         if (this.props.eventId != ownProps.match.params.eventId) {
@@ -9,23 +28,22 @@ class EventShow extends React.Component {
         }
     }
     componentDidMount() {
-        // debugger
         this.props.fetchEvent(this.props.eventId);
-
     }
 
     render() {
-        // debugger
         const { event } = this.props;
         let available;
-       
+        // let selector;
 
         if (!event) return null; // so component can mount and fetch
 
         if (event.available === 'sold_out') {
-            available = "Sold Out"
+            available = "Sold Out";
+            // select = "Sold Out"
         } else {
             available = event.available
+            return `${available} remaining`
         }
 
         return (
@@ -58,7 +76,43 @@ class EventShow extends React.Component {
                         </div>
                         <div className="register-bar">
                             <div className="price">{event.price}</div>
-                            <button className="register-button">REGISTER</button>
+                            <button className="register-button" onClick={this.handleOpenModal}>REGISTER</button>
+                            <ReactModal
+                                className="tix-modal-wrapper"
+                                isOpen={this.state.showModal}
+                                shouldCloseOnOverlayClick={true}
+                                onRequestClose={this.handleCloseModal}
+                            > 
+                                <div className="tix-modal-container">
+                                    <header className="tix-modal-header">
+                                        <h1>Select Tickets</h1>
+                                        <button className="tix-modal-close" onClick={this.handleCloseModal}>x</button>  
+                                    </header>
+                                    <section className="tix-modal-main">
+                                            <div className="tix-price">
+                                                <h1>General Admission</h1>
+                                                <p>${event.price}</p>
+                                                <p>{available}</p>
+                                            </div>
+                                            <div className="tix-select">
+                                                <select className="tix-select-input" 
+                                                    value={this.state.value} onChange={this.handleChange}>
+                                                    <option selected value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                    </section>
+                                    <section className="tix-modal-footer">
+                                       <p>Quantity: {(this.state.value)}</p> 
+                                       <p>Total: {(this.state.value) * event.price}</p> 
+                                       <Link to="events/tickets"> <button onClick={this.props.createRegistration(event.id)} className="modal-bttn register-button">Check Out</button>
+                                        </Link>
+                                    </section>
+                                </div>
+                            </ReactModal>
                         </div>
                         <div className="event-description-wrapper">
                             <div className="event-detail">

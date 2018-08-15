@@ -2,6 +2,7 @@
 import { connect } from 'react-redux';
 import EventShow from './event_show';
 import { fetchEvent } from '../../actions/event_actions';
+import { createRegistration } from '../../actions/registration_actions';
 
 const msp = (state, { match }) => {
     // debugger
@@ -16,6 +17,7 @@ const msp = (state, { match }) => {
 const mdp = dispatch => {
     return {
     fetchEvent: id => dispatch(fetchEvent(id)), 
+    createRegistration: id => dispatch(createRegistration(id)), 
     }
 }
 
