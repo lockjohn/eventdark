@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ActiveRecord::Base.transaction do
-    
+
     # Users
     User.destroy_all
     
@@ -109,4 +108,3 @@ ActiveRecord::Base.transaction do
     Registration.create!(user_id: 3, event_id:7)
 
 
-end
