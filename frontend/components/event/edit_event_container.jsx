@@ -11,9 +11,9 @@ const mapStateToProps = (state, ownProps) => {
     const defaultEvent = {
         name: '',
         description: '',
-        price: 0,
+        price: '',
         date: '', time: '',
-        capacity: 0,
+        capacity: '',
         photoFile: '',
     };
     const event = state.entities.events[ownProps.match.params.eventId] || defaultEvent;

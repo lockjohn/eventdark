@@ -1,3 +1,6 @@
+
+
+
 .event-form-wrapper {
     display: flex;
     flex-flow: column nowrap;
@@ -8,6 +11,38 @@
     height: 100vh;
     background-color: #EFF2F5
 }
+
+.event-form-datetime-input
+{
+	background-color: white;
+	border: 1px solid #d2d6df;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #282C35;
+	display: block;
+	font-family: Open-Sans, Raleway, Helvetica-Neue, Helvetica, Roboto, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	height: 41px;
+	letter-spacing: .7px;
+	outline: 0;
+	padding-bottom: 9px;
+	padding-left: 16px;
+	padding-right: 12px;
+	padding-top: 10px;
+	webkit-font-smoothing: antialiased;
+	width: 100%;
+	width: 200px;
+}
+.event-form-datetime-container
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+
 
 
 .event-form {

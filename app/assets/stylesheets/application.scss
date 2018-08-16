@@ -21,8 +21,9 @@
 @import "base/colors.scss";
 @import "base/layout.scss";
 
- @import "carousel.scss";
- @import "main.scss";
+@import "carousel.scss";
+@import "main.scss";
+@import "flatpickr.scss";
 
 /* components */
  @import "components/navbar.scss";
@@ -32,5 +33,6 @@
  @import "components/event_index.scss";
  @import "components/event_form.scss";
  @import "components/user_ticket_show.scss";
+
  
 

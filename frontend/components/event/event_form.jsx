@@ -1,18 +1,19 @@
+
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import {formatDate, formatTime} from '../../util/date_util';
+import Flatpickr from 'react-flatpickr';
 
 class EventForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.state = this.props.event;
-        this.state.time = formatTime(this.state.time);
+        
     }
     componentWillReceiveProps(nextProps) {
         if (this.props.event.id != nextProps.match.params.eventId) {
-            // this.props.fetchEvent(nextProps.match.params.eventId);
             this.setState(nextProps.event);
         }
     }
@@ -35,11 +36,16 @@ class EventForm extends React.Component {
             </ul>
         )};
     }
-
+    handleChange (e) {
+        this.setState({ date: e });
+        this.setState({ time: [e] });
+    }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
-        console.log(this.props.formType);
+        console.log(this.state.time);
+        
         const form = new FormData();
         form.append('event[name]', this.state.name)
         form.append('event[description]', this.state.description)
@@ -49,7 +55,6 @@ class EventForm extends React.Component {
         form.append('event[capacity]', this.state.capacity)
         form.append('event[photo]', this.state.photoFile)
         if (this.props.formType ==='Update Event') {
-            console.log(form);
             form.append('event[id]', this.props.match.params.eventId)
         }
         this.props.action(form, this.props.match.params.eventId).then(() => this.props.history.push('/'));
@@ -60,8 +65,7 @@ class EventForm extends React.Component {
     }
 
     render() {
-        // this.setState({[event.date]: formatDate(this.props.event.date)})
-        // this.setState({[event.time]: formatTime(this.props.event.time)})
+
         return (
             <div className="event-form-wrapper">
                 <div className="event-form"> <h1>Event Details</h1>
@@ -111,19 +115,22 @@ class EventForm extends React.Component {
                                 onChange={this.update('price')} />
                         </label>
                         <label>Date
-                         <input
-                                required
-                                type="date"
-                                value={formatDate(this.state.date)}
-                                onChange={this.update('date')} />
+                            <div className="event-form-datetime-container">
+                            <Flatpickr
+                                data-enable-time
+                                className="event-form-datetime-input"
+                                value={this.state.date}
+                                onChange={this.handleChange}
+                                options={{
+                                    altFormat: 'M j, h:iK',
+                                    enableTime: true,
+                                    defaultDate: this.state.time,
+                                    altInput: true
+                                }}
+                            />
+                        </div>
                         </label>
-                        <label>Time
-                         <input
-                                required
-                                type="time"
-                                value={formatTime(this.state.time)}
-                                onChange={this.update('time')} />
-                        </label>
+
                         
                         <input className="event-form-button" type="submit" value={this.props.formType} />
                     </form>

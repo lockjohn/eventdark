@@ -8,9 +8,9 @@ const mapStateToProps = (state, ownProps) => {
     const event = { 
         name: '', 
         description: '',
-        price: 0,
+        price: '',
         date: '', time: '',
-        capacity: 0,
+        capacity: '',
         photoFile: '',
     };
     const errors = state.errors.eventErrors || [];
