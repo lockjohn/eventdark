@@ -81,30 +81,27 @@
 
     Registration.destroy_all
 
-    Registration.create!(user_id: 1, event_id:1)
-    Registration.create!(user_id: 2, event_id:1)
-    Registration.create!(user_id: 3, event_id:1)
+    Registration.create!(user_id: dolores.id, event_id: west.id)
+    Registration.create!(user_id: bernard.id, event_id:west.id)
+    Registration.create!(user_id: maeve.id, event_id:west.id)
   
 
-    Registration.create!(user_id: 1, event_id:2)
-    Registration.create!(user_id: 3, event_id:2)
+    Registration.create!(user_id: dolores.id, event_id:japan.id)
+    Registration.create!(user_id: maeve.id, event_id:japan.id)
    
-    Registration.create!(user_id: 1, event_id:3)
-    Registration.create!(user_id: 2, event_id:3)
-    Registration.create!(user_id: 3, event_id:3)
+    Registration.create!(user_id: dolores.id, event_id:raj.id)
+    Registration.create!(user_id: bernard.id, event_id:raj.id)
+    Registration.create!(user_id: maeve.id, event_id:raj.id)
 
-    Registration.create!(user_id: 1, event_id:4)
-    Registration.create!(user_id: 2, event_id:4)
-    Registration.create!(user_id: 3, event_id:4)
-    Registration.create!(user_id: 1, event_id:5)
-    Registration.create!(user_id: 2, event_id:5)
-    Registration.create!(user_id: 3, event_id:5)
-    Registration.create!(user_id: 1, event_id:6)
-    Registration.create!(user_id: 2, event_id:6)
-    Registration.create!(user_id: 3, event_id:6)
+    Registration.create!(user_id: dolores.id, event_id:medieval.id)
+    Registration.create!(user_id: bernard.id, event_id:medieval.id)
+    Registration.create!(user_id: maeve.id, event_id:medieval.id)
+    Registration.create!(user_id: dolores.id, event_id:aztec.id)
+    Registration.create!(user_id: bernard.id, event_id:aztec.id)
+    Registration.create!(user_id: maeve.id, event_id:aztec.id)
+    Registration.create!(user_id: dolores.id, event_id: rome.id)
+    Registration.create!(user_id: maeve.id, event_id: rome.id)
+    Registration.create!(user_id: bernard.id, event_id: rome.id)
     
-    Registration.create!(user_id: 1, event_id:7)
-    Registration.create!(user_id: 2, event_id:7)
-    Registration.create!(user_id: 3, event_id:7)
-
+  
 
