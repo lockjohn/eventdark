@@ -20,9 +20,9 @@ ActiveRecord::Base.transaction do
     # file1 = File.open('./app/assets/images/dolores.jpg')
     # file2 = File.open('./app/assets/images/bernard.jpg')
     # file3 = File.open('./app/assets/images/maeve.jpg')
-    file1 = File.open('app/assets/images/dolores.jpg')
-    file2 = File.open('app/assets/images/bernard.jpg')
-    file3 = File.open('app/assets/images/maeve.jpg')
+    file1 = File.open('/app/assets/images/dolores.jpg')
+    file2 = File.open('/app/assets/images/bernard.jpg')
+    file3 = File.open('/app/assets/images/maeve.jpg')
 
     dolores.avatar.attach(io: file1, filename:'dolores_avatar.jpg' )
     bernard.avatar.attach(io: file2, filename:'bernard_avatar.jpg' )
@@ -54,13 +54,13 @@ ActiveRecord::Base.transaction do
     serengeti = Event.create!(name: "Serengeti", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 0, capacity: 5)
 
-    file4 = File.open('app/assets/images/westworld.jpg')
-    file5 = File.open('app/assets/images/japan.jpg')
-    file6 = File.open('app/assets/images/raj.jpg')
-    file7 = File.open('app/assets/images/medieval.jpg')
-    file8 = File.open('app/assets/images/chitchen-itza.jpg')
-    file9 = File.open('app/assets/images/rome.png')
-    file10 = File.open('app/assets/images/serengeti.jpg')
+    file4 = File.open('/app/assets/images/westworld.jpg')
+    file5 = File.open('/app/assets/images/japan.jpg')
+    file6 = File.open('/app/assets/images/raj.jpg')
+    file7 = File.open('/app/assets/images/medieval.jpg')
+    file8 = File.open('/app/assets/images/chitchen-itza.jpg')
+    file9 = File.open('/app/assets/images/rome.png')
+    file10 = File.open('/app/assets/images/serengeti.jpg')
     #file formate for local db seed:
     # file4 = File.open('./app/assets/images/westworld.jpg')
     # file5 = File.open('./app/assets/images/japan.jpg')
