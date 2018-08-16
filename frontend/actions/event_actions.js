@@ -29,9 +29,9 @@ export const clearErrors = () => {
     }
 }
 
-export const fetchAllEvents = () => dispatch => {
+export const fetchAllEvents = (category) => dispatch => {
     return ( 
-    EventAPIUtil.fetchEvents()
+    EventAPIUtil.fetchEvents(category)
     .then(fetchedEvents =>dispatch(receiveAllEvents(fetchedEvents)), 
     (err) => dispatch(eventErrors(err.responseJSON)))
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import EventIndex from './event/event_index';
+import EventIndex from '../event/event_index';
 import HomeCarousel from './home_carousel';
 
 class Home extends React.Component {

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { formatDateTime } from '../../util/date_util';
 
-const EventIndexItem = ({ event }) => (
-    <div>
+const CategoryIndexItem = ({ event }) => (
         <Link to={`/events/${event.id}`}>
             <div className="ei-item">
                 <div className="ei-item-img"
@@ -12,9 +11,9 @@ const EventIndexItem = ({ event }) => (
                             backgroundImage: `url(${event.photoUrl})`
                         }
                     }>
-                    <div className="ei-item-price">${event.price}</div>
                 </div>
                 <div className="ei-item-body">
+                    <div className="ei-item-price">${event.price}</div>
                     <div className="ei-item-date">{formatDateTime(event.date)}</div>
                     <div className="ei-item-title">{event.name} </div>
                     <div className="ei-item-organizer">{event.organizer}</div>
@@ -22,10 +21,7 @@ const EventIndexItem = ({ event }) => (
 
             </div>
         </Link>
-        <div className="ei-item-footer">
-            <div className="ei-item-category">{event.categories.map((category) => <Link to={`/e/${category}`}> <span> #{category}</span> </Link>)} </div>
-        </div>
-    </div>
 );
 
-export default EventIndexItem;
+
+export default CategoryIndexItem;

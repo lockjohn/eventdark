@@ -1,8 +1,16 @@
 class Api::EventsController < ApplicationController
 
     def index
-        @events = Event.all
-        render "api/events/index"
+        cat_name = params[:category]
+        
+        if cat_name
+            cat = Category.find_by(category: cat_name)
+            @events = cat.events
+            render "api/events/index"
+        else
+            @events = Event.all
+            render "api/events/index"
+        end
     end
 
     def show

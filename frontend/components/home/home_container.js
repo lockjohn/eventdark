@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {fetchAllEvents} from '../actions/event_actions';
+import {fetchAllEvents} from '../../actions/event_actions';
 import Home from './home_component';
 
 const msp = (state, ownProps) => {

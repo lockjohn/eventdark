@@ -166,7 +166,7 @@ class EventShow extends React.Component {
                                 <div className='categories-show-list'>
                                     <h3>Categories</h3>
                                     <ul>
-                                        {event.categories.map((category, i) => <Link to={`/events/${category}`}> <li key={i}>{category}</li></Link> ) }
+                                        {event.categories.map((category, i) => <Link to={`/e/${category}`}> <li key={i}>{category}</li></Link> ) }
                                     </ul>
                                  </div>
                             </div>

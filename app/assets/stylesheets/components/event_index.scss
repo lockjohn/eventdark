@@ -47,9 +47,10 @@ margin: 0 auto;
 	font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	font-weight: 100;
+	line-height: 20px;
 	letter-spacing: 1.3px;
 	opacity: 0.96;
-	padding: 3px 10px 5px 10px;
+	padding: 0px 8px;
 	position: absolute;
 	right: 12px;
 	top: 12px;
@@ -111,15 +112,16 @@ margin: 0 auto;
 }
 
 
-.ei-item-footer
-{
+.ei-item-footer {
+	margin: 0 auto;	
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
 	align-items: center;
 	background-color: white;
 	border-top: 1px solid #eff2f5;
 	display: flex;
 	height: 31px;
 	justify-content: space-between;
-	width: 100%;
+	width: 96%;
 	padding-left: 10px;
 }
 
