@@ -32,25 +32,25 @@
   #Events
     Event.destroy_all
 
-    west = Event.create!(name: "The Wild Old West", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    west = Event.create!(name: "The Wild Old West", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 159.99, capacity: 7)
 
-    japan = Event.create!(name: "Feudal Japan", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    japan = Event.create!(name: "Feudal Japan", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 259.99, capacity: 2)
 
-    raj = Event.create!(name: "The British Raj", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    raj = Event.create!(name: "The British Raj", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 19.99, capacity: 250)
 
-    medieval = Event.create!(name: "Medieval Times", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    medieval = Event.create!(name: "Medieval Times", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 100.00, capacity: 10)
 
-    aztec = Event.create!(name: "Aztec Empire", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    aztec = Event.create!(name: "Aztec Empire", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 400.00, capacity: 25)
 
-    rome = Event.create!(name: "Roman Empire", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    rome = Event.create!(name: "Roman Empire", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 0, capacity: 15)
 
-    serengeti = Event.create!(name: "Serengeti", organizer_id: 2, date: Time.now.to_datetime, time: Time.now.to_datetime, 
+    serengeti = Event.create!(name: "Serengeti", organizer_id: bernard.id, date: Time.now.to_datetime, time: Time.now.to_datetime, 
     location_id: 1, description: "Fancy dinner with a fancy hand fan!", price: 0, capacity: 5)
 
     file4 = File.open('app/assets/images/westworld.jpg')
