@@ -163,16 +163,22 @@ class EventShow extends React.Component {
                                     <p> egypt</p>
                                     <a>View Map</a>
                                 </div>
+                                <div className='categories-show-list'>
+                                    <h3>Categories</h3>
+                                    <ul>
+                                        {event.categories.map( category => <li>{category}</li> ) }
+                                    </ul>
+                                 </div>
                             </div>
                             <div className="event-description">
                                 <h3>Description</h3>
                                 <p>{event.description}</p>
                             </div>
                         </div>
-                        <div className="event-organizer">
+                        {/* <div className="event-organizer">
                             <h2>{event.organizer}</h2>
                             <p>{event.organizer_description}</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

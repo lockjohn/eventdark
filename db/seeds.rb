@@ -109,7 +109,7 @@
     urbane = Category.create!(category:"Urbane")
     violent = Category.create!(category:"Violent")
     militaristic = Category.create!(category:"Militaristic")
-    labor-intensive = Category.create!(category:"Labor-intensive")
+    labor_intensive = Category.create!(category:"Labor Intensive")
     equestrian = Category.create!(category:"Equestrian")
     linguistic = Category.create!(category:"Linguistic")
     culinary = Category.create!(category:"Culinary")
@@ -120,8 +120,8 @@
 
     Categorization.create!(category_id: rugged.id, event_id: west.id)
     Categorization.create!(category_id: rugged.id, event_id: medieval.id)
-    Categorization.create!(category_id: labor-intensive.id, event_id: medieval.id)
-    Categorization.create!(category_id: labor-intensive.id, event_id: west.id)
+    Categorization.create!(category_id: labor_intensive.id, event_id: medieval.id)
+    Categorization.create!(category_id: labor_intensive.id, event_id: west.id)
     Categorization.create!(category_id: violent.id, event_id: west.id)
     Categorization.create!(category_id: violent.id, event_id: japan.id)
     Categorization.create!(category_id: violent.id, event_id: aztec.id)
@@ -137,7 +137,7 @@
     Categorization.create!(category_id: militaristic.id, event_id: medieval.id)
     Categorization.create!(category_id: militaristic.id, event_id: japan.id)
     Categorization.create!(category_id: rugged.id, event_id: serengeti.id)
-    Categorization.create!(category_id: labor-intensive.id, event_id: serengeti.id)
+    Categorization.create!(category_id: labor_intensive.id, event_id: serengeti.id)
     Categorization.create!(category_id: equestrian.id, event_id: serengeti.id)
     Categorization.create!(category_id: culinary.id, event_id: rome.id)
     Categorization.create!(category_id: culinary.id, event_id: japan.id)
@@ -145,7 +145,7 @@
     Categorization.create!(category_id: aesthetic.id, event_id: aztec.id)
     Categorization.create!(category_id: aesthetic.id, event_id: medieval.id)
     Categorization.create!(category_id: aesthetic.id, event_id: raj.id)
-    Categorization.create!(category_id: aesthetic.id, event_id: culinary.id)
-    Categorization.create!(category_id: aesthetic.id, event_id: academic.id)
+    Categorization.create!(category_id: culinary.id, event_id: raj.id)
+    Categorization.create!(category_id: academic.id, event_id: raj.id)
   
 
