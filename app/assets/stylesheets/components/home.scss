@@ -1,7 +1,7 @@
 .home-page-wrapper {
 //  border: tomato 3px solid;
     width: 100%;
-   
+    background: rgb(248,248,250);
     margin: 0 auto;
 
 // position: relative;
@@ -59,6 +59,7 @@
         color:  #f6682f;
         font-size: 1.85em;
         margin-top: 15px;
+        font-family: $open;
         font-weight: lighter;
         letter-spacing: 2px;
         line-height: 60px;
@@ -95,8 +96,8 @@
     flex: 1 0 33%;
     text-align: center;
     color: white;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -105,6 +106,89 @@
 .event-index-header {
     margin: 50px auto;
     width: 75%;
+    font-family: $open;
     // border: tomato 1px solid;
     text-align: center;
+}
+
+
+
+.ei-cat-img-grid {
+    // border: 2px solid #f76707;
+    border-radius: 5px;
+    // background-color: #fff4e6;
+    box-sizing: border-box;
+   @media (max-width: 659px) {
+    align-items: stretch;
+	justify-content: center;
+	display: flex;
+    flex-flow: column; 
+    
+    }
+	// grid-template-rows: 1, minmax(260px, 1fr);
+    // grid-template-rows: repeat(autofit, min(250px));
+   @media (min-width: 660px) { grid-template-rows: repeat(3, minmax(260px, 1fr)); }
+    width: 83%;
+    // height: 100%; 
+    display: grid;
+    // grid-gap: 30px;
+    // grid-template-columns: repeat(minmax(3, 1fr));
+    // grid-template-rows: repeat(minmax(3, 250px));
+    div {
+    box-sizing: border-box;
+    // border: 2px solid #ffa94d;
+    border-radius: 5px;
+    padding: 1em;
+    // width:100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    // justify-content: center;
+    // padding-bottom: 40%;
+    // color: #d9480f;
+    
+    p {
+        padding-bottom: 100px;
+    }
+    }
+}
+
+
+.ei-cat-img-grid > div:hover {
+    cursor: pointer;
+	transform: scale(1.2);
+
+}
+@media (min-width: 660px) {
+
+.cat-img-1 {
+    background-color: tomato;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.cat-img-2 {
+    background-color: dodgerblue;
+    grid-area: 1 / 2 / 2 / 4;
+}
+.cat-img-3 {
+
+    background-color: darkgrey;
+    grid-area: 2 / 2 / 2 / 3;
+   
+}
+.cat-img-4 {
+    background-color: aquamarine;
+    grid-area: 3 / 1 / 4 / 3;
+}
+.cat-img-5 {
+    background-color: goldenrod;
+    grid-area: 3 / 3 / 4 / 4; 
+}
+.cat-img-6 {
+    background-color: lightcoral;
+}
+.cat-img-7 {
+    background-color: blueviolet;
+    grid-area: 2 / 2 / 3 / 3;
+}
 }

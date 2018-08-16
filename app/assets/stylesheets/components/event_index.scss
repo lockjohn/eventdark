@@ -1,6 +1,6 @@
 /* setting up grid with autofill, min size 250 width*/
 .ei-grid {
-width: 80%;
+width: 85%;
 display: grid;
 grid-gap: 30px;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -13,6 +13,7 @@ margin: 0 auto;
 
 .ei-item
 {   
+	transition: all 0.5s ease-in-out;
     height: 343.5;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
 	box-sizing: border-box;
@@ -88,15 +89,16 @@ margin: 0 auto;
     color: #282C35;
     font-family: $sans-serif;
 	// font-family: Roboto, Raleway, Open-Sans, Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	font-weight: 500;
+	font-size: 18px;
+	font-weight: bold;
 	height: 38px;
 	// margin: 0 auto;
 	margin-top: 3px;
 	max-height: 38px;
 	overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
+	text-align: left;
+	text-transform: uppercase;
 }
 .ei-item-organizer
 {
