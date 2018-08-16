@@ -120,9 +120,14 @@ margin: 0 auto;
 	height: 31px;
 	justify-content: space-between;
 	width: 100%;
+	padding-left: 10px;
 }
-.ei-item-categories
-{
-	font-size: 12px;
-	padding: 0 0 0 15px;
+
+.ei-item-category
+{	max-width: 500px;
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+	font-size: .75rem;
+	
 }

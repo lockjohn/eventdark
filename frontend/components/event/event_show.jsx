@@ -166,7 +166,7 @@ class EventShow extends React.Component {
                                 <div className='categories-show-list'>
                                     <h3>Categories</h3>
                                     <ul>
-                                        {event.categories.map( category => <li>{category}</li> ) }
+                                        {event.categories.map((category, i) => <Link to={`/events/${category}`}> <li key={i}>{category}</li></Link> ) }
                                     </ul>
                                  </div>
                             </div>
@@ -175,7 +175,7 @@ class EventShow extends React.Component {
                                 <p>{event.description}</p>
                             </div>
                         </div>
-                        {/* <div className="event-organizer">
+                        {/* <div className="event-organizer"> make link to cool map
                             <h2>{event.organizer}</h2>
                             <p>{event.organizer_description}</p>
                         </div> */}

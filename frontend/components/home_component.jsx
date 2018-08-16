@@ -27,8 +27,9 @@ class Home extends React.Component {
                     </div>
                         <header className="event-index-header">Events for you</header>
                         <EventIndex events={this.props.entities.events} />
+                    <header className="event-index-header">Militaristic</header>
+                    <EventIndex events={this.props.entities.events} />
                 </div>
-                <div className="home-categories-wrapper">Categories</div>
             </div>
         )
     }
