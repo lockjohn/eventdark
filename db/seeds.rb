@@ -13,7 +13,7 @@ User.destroy_all
     file1 = File.open('app/assets/images/dolores.jpg')
     file2 = File.open('app/assets/images/bernard.jpg')
     file3 = File.open('app/assets/images/maeve.jpg')
-    lee_avatar = File.open('app/assets/images/lee_avatar.png')
+    lee_avatar = File.open('app/assets/images/lee-avatar.png')
 
     dolores.avatar.attach(io: file1, filename:'dolores_avatar.jpg' )
     bernard.avatar.attach(io: file2, filename:'bernard_avatar.jpg' )
