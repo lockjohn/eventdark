@@ -79,7 +79,7 @@ japan = Event.create!(name: "Shogun World", organizer_id: lee.id, date: Time.now
     file15 = File.open('app/assets/images/west6.jpg')
     file16 = File.open('app/assets/images/west7.jpg')
     file17 = File.open('app/assets/images/west8.jpg')
-    file18 = File.open('app/assets/images/west9.png')
+    file18 = File.open('app/assets/images/west9.jpg')
     file19 = File.open('app/assets/images/west10.png')
     #file formate for local db seed:
     # file4 = File.open('./app/assets/images/westworld.jpg')
