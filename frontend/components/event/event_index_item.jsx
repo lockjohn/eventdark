@@ -2,7 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { formatDateTime } from '../../util/date_util';
 
-const EventIndexItem = ({ event }) => (
+const EventIndexItem = ({ event }) => {
+
+    if (!event) { return (
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>)
+    } else { return (
     <div>
         <Link to={`/events/${event.id}`}>
             <div className="ei-item">
@@ -26,6 +33,7 @@ const EventIndexItem = ({ event }) => (
             <div className="ei-item-category">{event.categories.map((category) => <Link to={`/e/${category}`}> <span> #{category}</span> </Link>)} </div>
         </div>
     </div>
-);
+)}
+}
 
 export default EventIndexItem;

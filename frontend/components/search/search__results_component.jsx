@@ -36,6 +36,12 @@ class SearchResults extends React.Component {
         let { events } = this.props;
         events = Object.values(events);
 
+        if (!event) {
+            <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>}
+    else {
         return (
             <div className="home-page-wrapper">
                 <div className="event-index-wrapper">
@@ -77,7 +83,7 @@ class SearchResults extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        )}
     }
 
 }

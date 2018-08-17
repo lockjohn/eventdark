@@ -66,20 +66,29 @@ class EventShow extends React.Component {
         let available;
         // let selector;
 
-        if (!event) return null; // so component can mount and fetch
+        ; // so component can mount and fetch
 
         if (event.available === 'sold_out') {
             available = "Sold Out";
             // select = "Sold Out"
         } else {
-            available = event.available
+            available = `${event.available} remaining`
             //  `${available} remaining`
         }
-        console.log("available is:", available);
+        // console.log("available is:", available);
         //make constant of the two possible html tags
         // use ternary to set max based on avaiable and then use max for i < max loop
 
-        return (
+
+        if (!event) {
+            return (
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            )
+        } else {
+         return (
             <div className="outermost-div">
             <div className="event-show-background"
             style={
@@ -186,7 +195,7 @@ class EventShow extends React.Component {
             </div>
 
         )
-    }
+    }}
 
 
 }
