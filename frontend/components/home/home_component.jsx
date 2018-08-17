@@ -31,8 +31,15 @@ class Home extends React.Component {
 
     render() {
         const { entities } = this.props;
-
-        return (
+        if(!entities.events) {
+            return (
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            )
+        } else
+       { return (
             <div className="home-page-wrapper">
                 <div className="home-hero">
                     <HomeCarousel />
@@ -40,9 +47,9 @@ class Home extends React.Component {
                 {/* <div className="home-hero"> /* </div> */}
                 <div className="event-index-wrapper">
                     <div className="home-search-container">
-                        <h1>Find your next experience</h1>
+                        <h1>Discover a park like no other</h1>
                         <form className="home-search-form" onSubmit={this.handleSubmit}>
-                            <input className="search-input-field" placeholder="enter an event or category" type="text" 
+                            <input className="search-input-field" placeholder="search by events by name" type="text" 
                                 value={this.state.value}
                                 onChange={this.handleChange}
                              />
@@ -52,45 +59,48 @@ class Home extends React.Component {
 
                     <header className="event-index-header">Events for you</header>
                     
-                    <EventIndex events={this.props.entities.events} />
+                    <EventIndex events={entities.events} />
                     
                     <header className="event-index-header">Browse by Top Categories</header>
-                    
+                    {/* <div class="spinner">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div> */}
                     <div className="ei-cat-img-grid">
                         
-                        <Link to='/e/Aesthetic' className="cat-link cat-img-1">
-                            <div className="cat-img-1">
+                        <Link to='/e/Aesthetic' className="ei-cat-link ei-cat-img-1">
+                            <div className="ei-cat-img-1">
                             <p> Aesthetic</p>
-                            <span className="cat-text">Feast on sensuality, pleasure for all the senses </span>
+                            <span className="ei-cat-text">Feast on sensuality, pleasure for all the senses </span>
                             </div>
                         </Link>
 
-                        <Link to='/e/Rugged' className="cat-link cat-img-2">
-                          <div className="cat-img-2">
+                        <Link to='/e/Rugged' className="ei-cat-link ei-cat-img-2">
+                          <div className="ei-cat-img-2">
                             <p>Rugged</p>
-                            <span className="cat-text">Test your limits in the most extreme terrains </span>
+                            <span className="ei-cat-text">Test your limits in the most extreme terrains </span>
                             </div>
                         </Link>
                         
-                        <Link to='/e/Violent' className="cat-link cat-img-3">
-                            <div className="cat-img-3">
-                            <p> Violent</p><span className="cat-text"> Only the brutal will survive </span>      
+                        <Link to='/e/Violent' className="ei-cat-link ei-cat-img-3">
+                            <div className="ei-cat-img-3">
+                            <p> Violent</p><span className="ei-cat-text"> Only the brutal will survive </span>      
                             </div>
                         </Link>
                         
-                        <Link to='/e/Culinary' className="cat-link cat-img-4">
-                        <div className="cat-img-4">
-                        <p> Culinary</p><span className="cat-text">Authentically recreated delights superbly executed for your palate</span>
+                        <Link to='/e/Culinary' className="ei-cat-link ei-cat-img-4">
+                        <div className="ei-cat-img-4">
+                        <p> Culinary</p><span className="ei-cat-text">Authentically recreated delights superbly executed for your palate</span>
                          </div>
                         </Link>
-                            <Link to='/e/Linguistic' className="cat-link cat-img-5">
-                        <div className="cat-img-5"><p> Linguistic</p><span className="cat-text">Exquisite linguisto-cultural detail </span>      </div>
+                            <Link to='/e/Linguistic' className="ei-cat-link ei-cat-img-5">
+                        <div className="ei-cat-img-5"><p> Linguistic</p><span className="ei-cat-text">Exquisite linguisto-cultural detail </span>      </div>
                         </Link>
                     </div>
 
                 </div>
             </div>
-        )
+        )}
     }
 
 }

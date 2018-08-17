@@ -68,13 +68,7 @@ class EventShow extends React.Component {
 
         ; // so component can mount and fetch
 
-        if (event.available === 'sold_out') {
-            available = "Sold Out";
-            // select = "Sold Out"
-        } else {
-            available = `${event.available} remaining`
-            //  `${available} remaining`
-        }
+        
         // console.log("available is:", available);
         //make constant of the two possible html tags
         // use ternary to set max based on avaiable and then use max for i < max loop
@@ -82,12 +76,19 @@ class EventShow extends React.Component {
 
         if (!event) {
             return (
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
+                <div className="spinner">
+                    <div className="double-bounce1"></div>
+                    <div className="double-bounce2"></div>
                 </div>
             )
         } else {
+            if (event.available === 'sold_out') {
+                available = "Sold Out";
+                // select = "Sold Out"
+            } else {
+                available = `${event.available} remaining`
+                //  `${available} remaining`
+            }
          return (
             <div className="outermost-div">
             <div className="event-show-background"
@@ -108,7 +109,7 @@ class EventShow extends React.Component {
                                     <div className="cal-date">
                                         <a>
                                             <p>AUG</p>
-                                            <p className="cal-date-num">18</p>
+                                            <p className="cal-date-num">16</p>
                                         </a>
                                     </div>
                                     <div className="detail-title">
@@ -117,7 +118,7 @@ class EventShow extends React.Component {
                                 </div>
                                 <div className="lower-half">
                                     <div>${event.price}</div>
-                                    <div>{available} remaining</div>
+                                    <div>{available}</div>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +167,7 @@ class EventShow extends React.Component {
                             <div className="event-detail">
                                 <div>
                                     <h3>Date and Time</h3>
-                                    <p>midnight Aug 18</p>
+                                    <p>midnight Aug 16</p>
                                     <a>Add to Calendar</a>
                                 </div>
                                 <div>
@@ -177,7 +178,7 @@ class EventShow extends React.Component {
                                 <div className='categories-show-list'>
                                     <h3>Categories</h3>
                                     <ul>
-                                        {event.categories.map((category, i) => <Link to={`/e/${category}`}> <li key={i}>{category}</li></Link> ) }
+                                         {event.categories.map((category, i) => <Link key={category + new Date().getTime()} to={`/e/${category}`}> <li key={category + new Date().getTime()}>{category}</li></Link> ) }
                                     </ul>
                                  </div>
                             </div>

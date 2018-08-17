@@ -72,6 +72,17 @@ max-width: 120px;
 max-height: 120px;
 border-radius: 50%;
 }
+.organized-events {
+    width: 80%;
+    
+}
+
+.events-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .ticket-wrapper {
     display: flex;

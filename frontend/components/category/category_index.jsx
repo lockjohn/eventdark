@@ -25,7 +25,7 @@ class CategoryIndex extends React.Component {
                 <div className="event-index-wrapper">
                     <header className="event-index-header">{this.props.match.params.category}</header>
                     <div className="ei-grid">
-                        <ul>{events.map(event => <li><CategoryIndexItem key={event.id} event={event}/></li>)}</ul>
+                        <ul>{events.map(event => <li><CategoryIndexItem key={(event.id)+ new Date ()} event={event}/></li>)}</ul>
                     </div>
                     <header className="event-index-header">Browse by Top Categories</header>
                     <div className="cat-img-grid">

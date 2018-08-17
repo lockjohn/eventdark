@@ -18,7 +18,7 @@ class Api::EventsController < ApplicationController
                 end
             end
         else
-            @events = Event.all
+            @events = Event.with_attached_photo
             render "api/events/index"
         end
     end

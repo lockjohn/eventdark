@@ -12,27 +12,16 @@ import { Carousel } from 'react-responsive-carousel';
 
 class HomeCarousel extends React.Component {
     render() {
-        return (
+       return (
             <Carousel showArrows={false} showThumbs={false} dynamicHeight={true} showIndicators={false} autoPlay interval={5000} infiniteLoop>
                 <div>
-                    <img src={window.pic1} />
-                    
+                    <img src="https://s3-us-west-1.amazonaws.com/eventdarkphotos/westworld-s1-1920x1080.jpg" />
                 </div>
                 <div>
-                    <img src={window.pic2} />
-                    
+                    <img src="https://s3-us-west-1.amazonaws.com/eventdarkphotos/pic2.jpg" />    
                 </div>
                 <div>
-                    <img src={window.pic3} />
-                    
-                </div>
-                <div>
-                    <img src={window.pic5} />
-                    
-                </div>
-                <div>
-                    <img src={window.pic7} />
-                   
+                    <img src="https://s3-us-west-1.amazonaws.com/eventdarkphotos/canyon-daylight-desert-774123.jpg" />    
                 </div>
             </Carousel>
         );

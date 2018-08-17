@@ -48,7 +48,7 @@ margin: 25px 0;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-	transition: all 0.5s ease-in-out;
+	transition: all 1s ease-in-out;
 	margin: 25px 0;
    
     p {
@@ -63,39 +63,57 @@ margin: 25px 0;
     }
 }
 
+.cat-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+	letter-spacing: 1px;
+	margin-top: 0px;
+    opacity: 0;
+    display: block;
+}
 
-.ei-cat-img-grid > div:hover {
+// .cat-link div:hover {
+//     cursor: pointer;
+//     // transform: scale(1.2);
+//     opacity: .5;
+//     .cat-text {
+//     opacity: 1;
+//     transition: all 0.5s ease-in-out;
+//     }   
+// }
+
+.cat-img-grid > a:hover {
     cursor: pointer;
     transform: scale(1.2);
     .cat-text {
     opacity: 1;
     transition: all 0.5s ease-in-out;
-}
-
+    }
 }
 
 .cat-img-1 {
-    background-image: image-url('aesthetic.jpg');
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/aesthetic.jpg");
     background-size: cover;
 }
 .cat-img-2 {
-    background-image: image-url('rugged.jpg');
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/rugged.jpg");
     background-size: cover;
   
 }
 .cat-img-3 {
-    background-image: image-url('violent.jpg');
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/violent.jpg");
     background-size: cover;
 
 }
 .cat-img-4 {
 
-    background-image: image-url('culinary.jpg');
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/culinary.jpg");
     background-size: cover;
-   background-position: right 0px bottom 5px;
+   
 }
 .cat-img-5 {
-   background-image: image-url('linguistic.jpg');
+   background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/linguistic.jpg");
     background-size: cover;
-    background-position: right 0px bottom 5px;
 }

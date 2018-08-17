@@ -68,7 +68,9 @@
     }
 }
 
-.search-input-field {
+input.search-input-field {
+    box-sizing: border-box;
+    padding-left: 15px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     flex: 2 0 66%;
@@ -97,7 +99,7 @@
     text-align: center;
 }
 
-.cat-link {
+.ei-cat-link {
     div {
     height: 100%;
     box-sizing: border-box;
@@ -107,7 +109,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in-out;
+    // transition: all 0.5s ease-in-out;
     }
 }
 
@@ -121,12 +123,14 @@
 	justify-content: center;
 	display: flex;
     flex-flow: column; 
+    transition: width 1s ease-in-out;
+    transition: height 1s ease-in-out;
     }
 
    @media (min-width: 660px) { 
     grid-template-rows: repeat(3, minmax(260px, 1fr)); 
-    
     display: grid;
+    grid-gap: 20px;
     }
     div {
     box-sizing: border-box;
@@ -137,60 +141,69 @@
     align-items: center;
     justify-content: center;
     min-height: 180px;
-    transition: all 0.5s ease-in-out;
+    
    
     
     p { 
         font-size: 20px;
         text-align: center;
         font-weight: bold;
-        color: black;
+        color: white;
         display: block;
         width: 100%;
         // margin: 0 auto;
-        background-color: rgba(255,255,255,0.47)
+        
 
     }
     span {
-        color: black;
-        background-color: rgba(255,255,255,0.47)
+        font-size: 15px;
+        color: white;
+        // 
     }
     }
 }
 
 
-.cat-link div:hover {
+.ei-cat-img-grid > a:hover {
     cursor: pointer;
-    transform: scale(1.2);
-    .cat-text {
+    transform: scale(1.1);
+    transition-delay: transform 0.5s ease-in-out;
+    p {
+        font-size: 30px;
+    }
+    .ei-cat-text {
+    background-color: rgba(255,255,255,0.47);
+    transition: opacity 0.5s ease-in-out;
     opacity: 1;
-    transition: all 0.5s ease-in-out;
+    // transition: all 0.5s ease-in-out;
+    }
 }
 
-}
 
-.cat-img-1 {
-    background-image: image-url('aesthetic.jpg');
+//make a hover for picture to put opacity filter on it.
+
+.ei-cat-img-1 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/aesthetic.jpg");
     background-size: cover;
 }
-.cat-img-2 {
-    background-image: image-url('rugged.jpg');
+.ei-cat-img-2 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/rugged.jpg");
     background-size: cover;
   
 }
-.cat-img-3 {
-    background-image: image-url('violent.jpg');
+.ei-cat-img-3 {
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/violent.jpg");
     background-size: cover;
 
 }
-.cat-img-4 {
+.ei-cat-img-4 {
 
-    background-image: image-url('culinary.jpg');
+    background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/culinary.jpg");
     background-size: cover;
    
 }
-.cat-img-5 {
-   background-image: image-url('linguistic.jpg');
+.ei-cat-img-5 {
+   background-image: url("https://s3-us-west-1.amazonaws.com/eventdarkphotos/linguistic.jpg");
     background-size: cover;
 }
 
@@ -198,30 +211,30 @@
 
 @media (min-width: 660px) {
 
-.cat-link > .cat-img-1 {
+.ei-cat-link > .ei-cat-img-1 {
     grid-area: 1 / 1 / 2 / 2;
 }
-.cat-img-2 {
+.ei-cat-img-2 {
     
     grid-area: 1 / 2 / 2 / 4;
 }
-.cat-img-3 {
+.ei-cat-img-3 {
 
     
     grid-area: 2 / 2 / 2 / 3;
    
 }
-.cat-img-4 {
+.ei-cat-img-4 {
     
     grid-area: 3 / 1 / 4 / 3;
 }
-.cat-img-5 {
+.ei-cat-img-5 {
     
     grid-area: 3 / 3 / 4 / 4; 
 }
 }
 
-.cat-text {
+.ei-cat-text {
     color: white;
     font-size: 14px;
     font-weight: 700;
