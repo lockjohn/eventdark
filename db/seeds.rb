@@ -155,7 +155,7 @@ japan = Event.create!(name: "Shogun World", organizer_id: lee.id, date: Time.now
     Categorization.create!(category_id: violent.id, event_id: west8.id)
     Categorization.create!(category_id: linguistic.id, event_id: rome.id)
     Categorization.create!(category_id: linguistic.id, event_id: japan.id)
-    Categorization.create!(category_id: rugged.id, event_id: serengeti.id)
+    Categorization.create!(category_id: rugged.id, event_id: west9.id)
     Categorization.create!(category_id: culinary.id, event_id: west4.id)
     Categorization.create!(category_id: culinary.id, event_id: west5.id)
     Categorization.create!(category_id: aesthetic.id, event_id: future.id)
