@@ -1,6 +1,7 @@
 import React from 'react';
 import EventIndex from '../event/event_index';
 import HomeCarousel from './home_carousel';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -25,18 +26,45 @@ class Home extends React.Component {
                             <input className="search-button" type="submit" />
                         </form>
                     </div>
-                        <header className="event-index-header">Events for you</header>
-                        <EventIndex events={this.props.entities.events} />
+
+                    <header className="event-index-header">Events for you</header>
+                    
+                    <EventIndex events={this.props.entities.events} />
+                    
                     <header className="event-index-header">Browse by Top Categories</header>
+                    
                     <div className="ei-cat-img-grid">
-                        <div className="cat-img-1"><img src="" alt="" /> <p>Rugged</p></div>
-                        <div className="cat-img-2"><img src="" alt="" /><p> Aesthetic</p></div>
-                        <div className="cat-img-3"><img src="" alt="" /><p> Violent</p></div>
-                        <div className="cat-img-4"><img src="" alt="" /><p> Culinary</p></div>
-                        <div className="cat-img-5"><img src="" alt="" /><p> Linguistic</p></div>
-                        {/* <div className="cat-img-6"><img src="" alt="" /> Urbane</div>
-                        <div className="cat-img-7"><img src="" alt="" /> Equestrian</div> */}
+                        
+                        <Link to='/e/Aesthetic' className="cat-link cat-img-1">
+                            <div className="cat-img-1">
+                            <p> Aesthetic</p>
+                            <span className="cat-text">Feast on sensuality, pleasure for all the senses </span>
+                            </div>
+                        </Link>
+
+                        <Link to='/e/Rugged' className="cat-link cat-img-2">
+                          <div className="cat-img-2">
+                            <p>Rugged</p>
+                            <span className="cat-text">Test your limits in the most extreme terrains </span>
+                            </div>
+                        </Link>
+                        
+                        <Link to='/e/Violent' className="cat-link cat-img-3">
+                            <div className="cat-img-3">
+                            <p> Violent</p><span className="cat-text"> Only the brutal will survive </span>      
+                            </div>
+                        </Link>
+                        
+                        <Link to='/e/Culinary' className="cat-link cat-img-4">
+                        <div className="cat-img-4">
+                        <p> Culinary</p><span className="cat-text">Authentically recreated delights superbly executed for your palate</span>
+                         </div>
+                        </Link>
+                            <Link to='/e/Linguistic' className="cat-link cat-img-5">
+                        <div className="cat-img-5"><p> Linguistic</p><span className="cat-text">Exquisite linguisto-cultural detail </span>      </div>
+                        </Link>
                     </div>
+
                 </div>
             </div>
         )

@@ -1,0 +1,100 @@
+
+.cat-item {
+	transition: all 0.5s ease-in-out;
+    height: 343.5;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+	box-sizing: border-box;
+	border: none;
+	display: block;
+	// margin: 15px;
+	position: relative;
+	transition: box-shadow 0.5s;
+max-height: 200px;
+width: 100%;
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;
+overflow: hidden;
+margin: 25px 0;
+}
+
+.cat-item-img{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	object-fit: cover;
+	overflow: hidden;
+	padding-top: 50%;
+	text-align: center;
+	width: 60%;
+}
+
+.cat-img-grid {
+    border-radius: 5px;
+    box-sizing: border-box;
+    align-items: stretch;
+	justify-content: center;
+	display: flex;
+    flex-flow: column; 
+    width: 83%;
+	
+	div {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+	transition: all 0.5s ease-in-out;
+	margin: 25px 0;
+   
+    p {
+        text-align: center;
+        color: white;
+        display: block;
+		width: 100%;
+		font-weight: bold;
+		letter-spacing: 2px;
+
+    }
+    }
+}
+
+
+.ei-cat-img-grid > div:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    .cat-text {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+}
+
+.cat-img-1 {
+    background-image: image-url('aesthetic.jpg');
+    background-size: cover;
+}
+.cat-img-2 {
+    background-image: image-url('rugged.jpg');
+    background-size: cover;
+  
+}
+.cat-img-3 {
+    background-image: image-url('violent.jpg');
+    background-size: cover;
+
+}
+.cat-img-4 {
+
+    background-image: image-url('culinary.jpg');
+    background-size: cover;
+   
+}
+.cat-img-5 {
+   background-image: image-url('linguistic.jpg');
+    background-size: cover;
+}

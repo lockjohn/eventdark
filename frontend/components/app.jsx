@@ -15,6 +15,7 @@ import CreateEventContainer from './event/create_event_container';
 import EditEventContainer from './event/edit_event_container';
 import UserTicketsContainer from './tickets/user_tickets_container';
 import CategoryContainer from './category/category_container';
+import Footer from './footer/footer';
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
@@ -32,6 +33,7 @@ const App = () => (
         <Route component={HomeContainer} />
         <Route path='*' component={LoginFormContainer} />
         </Switch>
+        <Footer />
     </div>
 );
 

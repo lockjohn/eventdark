@@ -1,33 +1,20 @@
 .home-page-wrapper {
-//  border: tomato 3px solid;
     width: 100%;
     background: rgb(248,248,250);
     margin: 0 auto;
-
-// position: relative;
 }
 
 .home-hero {
-    // background-image: image-url('herotest1.jpg');
-    // background-repeat: no-repeat;
-    // background-position: top;
-    // background-size: cover;
-    // border: dodgerblue 3px solid;
-    // width: 100%;
+
     height: 45git vh;
-    // max-height: 375px;
-    // margin: 0 auto;
     margin-bottom: -70px;
 
 }
 
 .event-index-wrapper {
-    // background-color: $border-color;
     margin: 0px auto;
     width: 100%;
     max-width: 1200px;
-    // height: 2000px;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -49,8 +36,7 @@
     background-image: linear-gradient(rgba(255,255,255,0.87) 0%, #fff 25%);
     margin: 0 auto;
     width: 80%;
-    // position: relative;
-    // top: 25%;
+    
     display: block;
     z-index: 2;
     padding: 20px 0;
@@ -111,59 +97,103 @@
     text-align: center;
 }
 
+.cat-link {
+    div {
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    }
+}
 
 
 .ei-cat-img-grid {
-    // border: 2px solid #f76707;
     border-radius: 5px;
-    // background-color: #fff4e6;
     box-sizing: border-box;
-   @media (max-width: 659px) {
+    width: 83%;
+    @media (max-width: 659px) {
     align-items: stretch;
 	justify-content: center;
 	display: flex;
     flex-flow: column; 
-    
     }
-	// grid-template-rows: 1, minmax(260px, 1fr);
-    // grid-template-rows: repeat(autofit, min(250px));
-   @media (min-width: 660px) { grid-template-rows: repeat(3, minmax(260px, 1fr)); }
-    width: 83%;
-    // height: 100%; 
+
+   @media (min-width: 660px) { 
+    grid-template-rows: repeat(3, minmax(260px, 1fr)); 
+    
     display: grid;
-    // grid-gap: 30px;
-    // grid-template-columns: repeat(minmax(3, 1fr));
-    // grid-template-rows: repeat(minmax(3, 250px));
+    }
     div {
     box-sizing: border-box;
-    // border: 2px solid #ffa94d;
     border-radius: 5px;
     padding: 1em;
-    // width:100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     transition: all 0.5s ease-in-out;
-    // justify-content: center;
-    // padding-bottom: 40%;
-    // color: #d9480f;
+   
     
-    p {
-        padding-bottom: 100px;
+    p { 
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        display: block;
+        width: 100%;
+
     }
     }
 }
 
 
-.ei-cat-img-grid > div:hover {
+.cat-link div:hover {
     cursor: pointer;
-	transform: scale(1.2);
+    transform: scale(1.2);
+    .cat-text {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
 
 }
-@media (min-width: 660px) {
 
 .cat-img-1 {
-    background-color: tomato;
+    background-image: image-url('aesthetic.jpg');
+    background-size: cover;
+}
+.cat-img-2 {
+    background-image: image-url('rugged.jpg');
+    background-size: cover;
+  
+}
+.cat-img-3 {
+    background-image: image-url('violent.jpg');
+    background-size: cover;
+
+}
+.cat-img-4 {
+
+    background-image: image-url('culinary.jpg');
+    background-size: cover;
+   
+}
+.cat-img-5 {
+   background-image: image-url('linguistic.jpg');
+    background-size: cover;
+}
+
+
+
+@media (min-width: 660px) {
+
+.cat-link > .cat-img-1 {
+    // background-image: image-url('rugged.jpg');
+    // background-size: cover;
     grid-area: 1 / 1 / 2 / 2;
 }
 .cat-img-2 {
@@ -184,11 +214,15 @@
     background-color: goldenrod;
     grid-area: 3 / 3 / 4 / 4; 
 }
-.cat-img-6 {
-    background-color: lightcoral;
 }
-.cat-img-7 {
-    background-color: blueviolet;
-    grid-area: 2 / 2 / 3 / 3;
-}
+
+.cat-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+	letter-spacing: 1px;
+	margin-top: 0px;
+    opacity: 0;
+    display: block;
 }

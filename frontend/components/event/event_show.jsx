@@ -38,10 +38,12 @@ class EventShow extends React.Component {
     componentWillReceiveProps(ownProps) {
         if (this.props.eventId != ownProps.match.params.eventId) {
             this.props.fetchEvent(ownProps.match.params.eventId);
+            window.scrollTo(0, 0);
         }
     }
     componentDidMount() {
         this.props.fetchEvent(this.props.eventId);
+        window.scrollTo(0, 0);
     }
 
     renderErrors() {
