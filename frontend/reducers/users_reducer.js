@@ -3,7 +3,6 @@ import {RECEIVE_USER_TICKETS} from "../actions/registration_actions";
 import {merge} from 'lodash';
 
 const usersReducer = (state={}, action) => {
-    // debugger
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:

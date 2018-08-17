@@ -6,7 +6,6 @@ import CategoryIndexItem from '../category/category_index_item';
 class SearchResults extends React.Component {
 
     componentDidMount() {
-        console.log(this.props.match.params)
         this.props.fetchAllEvents(this.props.match.params.category);
         window.scrollTo(0, 0);
     }

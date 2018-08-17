@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class CategoryIndex extends React.Component {
 
     componentDidMount() {
-        console.log(this.props.match.params)
+        
         this.props.fetchAllEvents(this.props.match.params.category);
         window.scrollTo(0,0);
     }
@@ -25,7 +25,7 @@ class CategoryIndex extends React.Component {
                 <div className="event-index-wrapper">
                     <header className="event-index-header">{this.props.match.params.category}</header>
                     <div className="ei-grid">
-                        <ul>{events.map(event => <li><CategoryIndexItem key={(event.id)+ new Date ()} event={event}/></li>)}</ul>
+                        <ul>{events.map(event => <li><CategoryIndexItem key={new Date().getTime()} event={event}/></li>)}</ul>
                     </div>
                     <header className="event-index-header">Browse by Top Categories</header>
                     <div className="cat-img-grid">

@@ -64,15 +64,6 @@ class EventShow extends React.Component {
     render() {
         const { event } = this.props;
         let available;
-        // let selector;
-
-        ; // so component can mount and fetch
-
-        
-        // console.log("available is:", available);
-        //make constant of the two possible html tags
-        // use ternary to set max based on avaiable and then use max for i < max loop
-
 
         if (!event) {
             return (

@@ -42,9 +42,8 @@ class EventForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
-        console.log(this.state.time);
+        
         
         const form = new FormData();
         form.append('event[name]', this.state.name)

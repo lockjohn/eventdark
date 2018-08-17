@@ -3,7 +3,7 @@ import {fetchAllEvents} from '../../actions/event_actions';
 import Home from './home_component';
 
 const msp = (state, ownProps) => {
-    console.log(state.entities)
+
     return {
         entities: state.entities,
         //Home will pass props to search and category components in the future 

@@ -19,7 +19,6 @@ const mapStateToProps = (state, ownProps) => {
     const event = state.entities.events[ownProps.match.params.eventId] || defaultEvent;
     const formType = 'Update Event';
     const errors = state.errors.eventErrors || [];
-    // debugger;
     return { event, formType , errors};
 };
 

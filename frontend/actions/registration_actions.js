@@ -25,7 +25,7 @@ export const createRegistration = event => dispatch => {
     return (
       newRegistration(event)
       .then(userinfo => dispatch(receiveUserTickets(userinfo)), 
-            (err) => { console.log(err); return dispatch(registrationError(err.responseJSON))})
+            (err) => {return dispatch(registrationError(err.responseJSON))})
     )
 }
 

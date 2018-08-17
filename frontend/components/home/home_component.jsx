@@ -18,13 +18,11 @@ class Home extends React.Component {
     }
     
     handleChange(e) {
-        console.log(e.target)
-        console.log(e.target.value)
+       
         this.setState({ value: e.target.value })
     }
 
     handleSubmit (e) {
-        console.log("submit:", this.state.value)
         e.preventDefault();
         this.props.history.push(`/search/${this.state.value}`);
     }

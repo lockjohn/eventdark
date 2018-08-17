@@ -10,7 +10,6 @@ class UserTickets extends React.Component {
 
     render() {
         let { tickets, user } = this.props;
-        console.log(user.events);
         return (
             <div className="user-show-page-wrapper">
                 <div className="user-show-background"
