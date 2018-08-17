@@ -86,17 +86,18 @@
     input.event-form-button {
         width: 25%;
         text-align: center;
-        padding: 12px 34px;
-        margin: 0px 0px; 
+        // padding: 12px 34px;
         border-radius: 3px;
         align-self: center;
-
+        // text-overflow: ellipsis;
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
         font-size: 15px;
         color: #fff;
         background-color: #00ab44;
+        white-space: normal;
+word-wrap: break-word;
     }
 }
 

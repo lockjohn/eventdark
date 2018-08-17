@@ -141,13 +141,19 @@
    
     
     p { 
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
         font-weight: bold;
-        color: white;
+        color: black;
         display: block;
         width: 100%;
+        // margin: 0 auto;
+        background-color: rgba(255,255,255,0.47)
 
+    }
+    span {
+        color: black;
+        background-color: rgba(255,255,255,0.47)
     }
     }
 }
@@ -186,7 +192,6 @@
 .cat-img-5 {
    background-image: image-url('linguistic.jpg');
     background-size: cover;
-    // background-position-y: 100px;
 }
 
 
@@ -194,8 +199,6 @@
 @media (min-width: 660px) {
 
 .cat-link > .cat-img-1 {
-    // background-image: image-url('rugged.jpg');
-    // background-size: cover;
     grid-area: 1 / 1 / 2 / 2;
 }
 .cat-img-2 {

@@ -18,9 +18,6 @@ const UserTicketEvent = ({ ticket }) => (
                 <div className="ei-item-title">{ticket.name} </div>
                 <div className="ei-item-organizer">{ticket.organizer}</div>
             </div>
-            <div className="ei-item-footer">
-                <div className="ei-item-category"> </div>
-            </div>
         </div>
     </Link>
 
