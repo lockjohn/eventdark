@@ -10,12 +10,12 @@ export default () => {
                 <a href="https://github.com/lockjohn/eventdark">
                     <i className="fa fa-github fa-2x footer-icon" aria-hidden="true" />
                 </a>
-                <Link to="/">
+                <a href="">
                     <i
                         className="fa fa-linkedin-square fa-2x footer-icon"
                         aria-hidden="true"
                     />
-                </Link>
+                </a>
             </nav>
         </footer>
     );
