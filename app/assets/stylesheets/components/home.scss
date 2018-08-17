@@ -136,6 +136,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    min-height: 180px;
     transition: all 0.5s ease-in-out;
    
     
@@ -185,6 +186,7 @@
 .cat-img-5 {
    background-image: image-url('linguistic.jpg');
     background-size: cover;
+    // background-position-y: 100px;
 }
 
 
@@ -197,21 +199,21 @@
     grid-area: 1 / 1 / 2 / 2;
 }
 .cat-img-2 {
-    background-color: dodgerblue;
+    
     grid-area: 1 / 2 / 2 / 4;
 }
 .cat-img-3 {
 
-    background-color: darkgrey;
+    
     grid-area: 2 / 2 / 2 / 3;
    
 }
 .cat-img-4 {
-    background-color: aquamarine;
+    
     grid-area: 3 / 1 / 4 / 3;
 }
 .cat-img-5 {
-    background-color: goldenrod;
+    
     grid-area: 3 / 3 / 4 / 4; 
 }
 }

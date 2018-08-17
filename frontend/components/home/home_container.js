@@ -12,7 +12,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch, ownProps) => {
     return {
-     fetchAllEvents: () => dispatch(fetchAllEvents()),   //nothing for now, maybe some actions for search and categories, tickets
+     fetchAllEvents: (category) => dispatch(fetchAllEvents(category)),   //nothing for now, maybe some actions for search and categories, tickets
     }
 };
 

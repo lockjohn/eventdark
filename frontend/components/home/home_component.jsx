@@ -4,9 +4,29 @@ import HomeCarousel from './home_carousel';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
+    constructor () {
+        super();
+        this.state = {
+            value: '',
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
     componentDidMount() {
         this.props.fetchAllEvents();
+    }
+    
+    handleChange(e) {
+        console.log(e.target)
+        console.log(e.target.value)
+        this.setState({ value: e.target.value })
+    }
+
+    handleSubmit (e) {
+        console.log("submit:", this.state.value)
+        e.preventDefault();
+        this.props.history.push(`/search/${this.state.value}`);
     }
 
     render() {
@@ -21,8 +41,11 @@ class Home extends React.Component {
                 <div className="event-index-wrapper">
                     <div className="home-search-container">
                         <h1>Find your next experience</h1>
-                        <form className="home-search-form">
-                            <input className="search-input-field" type="text" name="" id="" />
+                        <form className="home-search-form" onSubmit={this.handleSubmit}>
+                            <input className="search-input-field" placeholder="enter an event or category" type="text" 
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                             />
                             <input className="search-button" type="submit" />
                         </form>
                     </div>

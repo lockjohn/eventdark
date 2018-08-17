@@ -16,6 +16,7 @@ import EditEventContainer from './event/edit_event_container';
 import UserTicketsContainer from './tickets/user_tickets_container';
 import CategoryContainer from './category/category_container';
 import Footer from './footer/footer';
+import SearchContainer from './search/search_container';
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
@@ -29,6 +30,7 @@ const App = () => (
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
         <ProtectedRoute exact path="/events/tickets" component={UserTicketsContainer} />
         <Route exact path="/e/:category" component={CategoryContainer} />
+        <Route exact path="/search/:category" component={SearchContainer} />
         <Route path="/events/:eventId" component={EventShowContainer} />
         <Route component={HomeContainer} />
         <Route path='*' component={LoginFormContainer} />

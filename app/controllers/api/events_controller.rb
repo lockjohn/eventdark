@@ -2,11 +2,21 @@ class Api::EventsController < ApplicationController
 
     def index
         cat_name = params[:category]
-        
         if cat_name
-            cat = Category.find_by(category: cat_name)
-            @events = cat.events
-            render "api/events/index"
+         
+            if cat = Category.find_by(category: cat_name)
+                @events = cat.events
+                render "api/events/index"
+            else
+               
+                letter = params[:category][0].upcase
+                @events = Event.where("name LIKE :prefix", prefix: "#{letter}%")
+                if @events.length > 0 
+                     render "api/events/index" 
+                else 
+                    render json: ["No results for that search"], status: 404
+                end
+            end
         else
             @events = Event.all
             render "api/events/index"
