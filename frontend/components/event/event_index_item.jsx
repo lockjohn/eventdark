@@ -30,7 +30,7 @@ const EventIndexItem = ({ event }) => {
             </div>
         </Link>
         <div className="ei-item-footer">
-            <div className="ei-item-category">{event.categories.map((category) => <Link to={`/e/${category}`}> <span> #{category}</span> </Link>)} </div>
+            <div className="ei-item-category">{event.categories.map((category,i) => <Link key={i} to={`/e/${category}`}> <span> #{category}</span> </Link>)} </div>
         </div>
     </div>
 )}
