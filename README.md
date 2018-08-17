@@ -9,7 +9,7 @@ Features
 
 
 ![fullscreen ss](readme/full_screen_splash.png)
-![mobile screen ss](readme/splash-mobile.png)
+
 
 - Site uses is mobile-first reponsive based burely on native css design, including css flex and grid properties
 - User account creation and user session authentication using BCrpyt encryption
